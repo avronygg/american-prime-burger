@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --apb-red:      #C8102E;
+  --apb-red-dark: #8B0A1F;
+  --apb-cream:    #F5EFE6;
+  --apb-black:    #0F0F0F;
+  --apb-blue:     #1B3A6B;
+  --apb-mustard:  #E4A82C;
+  --apb-gray-100: #E8E3DA;
+  --apb-gray-500: #6B6660;
+  --apb-gray-900: #1A1A1A;
+}
+
+@theme inline {
+  --color-apb-red:      var(--apb-red);
+  --color-apb-red-dark: var(--apb-red-dark);
+  --color-apb-cream:    var(--apb-cream);
+  --color-apb-black:    var(--apb-black);
+  --color-apb-mustard:  var(--apb-mustard);
+  --color-apb-gray-500: var(--apb-gray-500);
+  --color-apb-gray-900: var(--apb-gray-900);
+  --font-display: var(--font-anton);
+  --font-body:    var(--font-manrope);
+  --font-mono:    var(--font-space-mono);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--apb-black);
+  color: var(--apb-cream);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.35;
+}
+
+/* Hide scrollbar on category nav */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Animations */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(48px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-up     { animation: fade-up 0.8s cubic-bezier(0.16,1,0.3,1) both; }
+.animate-fade-in     { animation: fade-in 0.7s ease both; }
+.animate-slide-right { animation: slide-in-right 0.9s cubic-bezier(0.16,1,0.3,1) both; }
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
