@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { loginAction } from "./actions";
 
 export default function LoginPage() {
-  const router = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -14,29 +12,23 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
 
-    const form = e.currentTarget;
-    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-    const password = (form.elements.namedItem("password") as HTMLInputElement).value;
-
-    const result = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
+    const formData = new FormData(e.currentTarget);
+    const result = await loginAction(formData);
 
     if (result?.error) {
-      setError("Email o contraseña incorrectos.");
+      setError(result.error);
       setLoading(false);
-    } else {
-      router.push("/admin");
     }
+    // Si no hay error, el server action redirige automáticamente a /admin
   }
 
   return (
     <div className="min-h-screen bg-[#0F0F0F] flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <p className="text-[#C8102E] text-xs tracking-[0.3em] uppercase font-mono mb-2">Panel de administración</p>
+          <p className="text-[#C8102E] text-xs tracking-[0.3em] uppercase font-mono mb-2">
+            Panel de administración
+          </p>
           <h1 className="text-[#F5EFE6] text-3xl font-bold tracking-tight uppercase">
             American Prime
           </h1>
@@ -51,6 +43,7 @@ export default function LoginPage() {
               name="email"
               type="email"
               required
+              defaultValue="admin@americanprimeburger.cl"
               className="w-full bg-[#1A1A1A] border border-[#2a2a2a] text-[#F5EFE6] px-4 py-3 text-sm focus:outline-none focus:border-[#C8102E] transition-colors"
             />
           </div>
@@ -67,9 +60,7 @@ export default function LoginPage() {
             />
           </div>
 
-          {error && (
-            <p className="text-[#C8102E] text-xs">{error}</p>
-          )}
+          {error && <p className="text-[#C8102E] text-xs">{error}</p>}
 
           <button
             type="submit"
