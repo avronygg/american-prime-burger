@@ -23,38 +23,15 @@ export default function Hero() {
         <div className="relative z-10">
 
           {/* Logo */}
-          <div className="mb-5 animate-fade-up">
+          <div className="mb-8 animate-fade-up">
             <Image
               src="/images/logo-white.png"
               alt="American Prime Burger"
-              width={260}
-              height={80}
-              className="h-16 md:h-20 w-auto object-contain"
+              width={320}
+              height={100}
+              className="h-20 md:h-28 w-auto object-contain"
               priority
             />
-          </div>
-
-          {/* Location badge */}
-          <div className="flex items-center gap-3 mb-6 animate-fade-up">
-            {/* Mini USA flag: horizontal stripes + blue canton */}
-            <div className="relative overflow-hidden w-7 h-5 shrink-0 border border-[#2a2a2a]">
-              <div className="absolute inset-0 flex flex-col">
-                <div className="flex-1 bg-[#C8102E]" />
-                <div className="flex-1 bg-[#F5EFE6]" />
-                <div className="flex-1 bg-[#C8102E]" />
-                <div className="flex-1 bg-[#F5EFE6]" />
-                <div className="flex-1 bg-[#C8102E]" />
-                <div className="flex-1 bg-[#F5EFE6]" />
-                <div className="flex-1 bg-[#C8102E]" />
-              </div>
-              <div className="absolute top-0 left-0 w-[42%] h-[57%] bg-[#1B3A6B]" />
-            </div>
-            <p
-              className="text-[#C8102E] text-xs tracking-[0.4em] uppercase"
-              style={{ fontFamily: "var(--font-space-mono)" }}
-            >
-              Providencia · Santiago
-            </p>
           </div>
 
           {/* Title — 3 equal lines */}
@@ -79,8 +56,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-2 mb-8 animate-fade-up delay-200">
             {[
               "★ Carne 100% Angus americano",
-              "♨ Ahumado 12 horas",
-              "4.8★ Google Reviews",
+              "♨ Ahumado 12 a 16 horas",
             ].map((seal) => (
               <span
                 key={seal}
