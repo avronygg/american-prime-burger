@@ -8,12 +8,20 @@ type Ingredient = { name: string; grams?: number };
 
 export default function ProductModal() {
   const [product, setProduct] = useState<Product | null>(null);
+  const [visible, setVisible] = useState(false);
 
-  const close = useCallback(() => setProduct(null), []);
+  const close = useCallback(() => {
+    setVisible(false);
+    setTimeout(() => setProduct(null), 280);
+  }, []);
 
   // Listen for open events from any ProductCard
   useEffect(() => {
-    const handler = (e: Event) => setProduct((e as CustomEvent).detail as Product);
+    const handler = (e: Event) => {
+      const next = (e as CustomEvent).detail as Product;
+      setProduct(next);
+      requestAnimationFrame(() => setVisible(true));
+    };
     window.addEventListener("apb:openProduct", handler);
     return () => window.removeEventListener("apb:openProduct", handler);
   }, []);
@@ -35,20 +43,25 @@ export default function ProductModal() {
   const ingredients = product.ingredients ? (product.ingredients as Ingredient[]) : [];
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end md:items-center justify-center">
-      {/* Backdrop — clicking it closes the modal */}
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 md:p-6">
+
+      {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-[#0F0F0F]/80 backdrop-blur-sm"
+        className={`absolute inset-0 bg-[#0F0F0F]/85 backdrop-blur-sm transition-opacity duration-300 ${visible ? "opacity-100" : "opacity-0"}`}
         onClick={close}
       />
 
       {/* Panel */}
       <div
-        className="relative w-full md:max-w-lg bg-[#111] flex flex-col max-h-[90dvh] border-t-2 border-[#C8102E] md:border-2"
-        style={{ boxShadow: "0 -3px 0 #C8102E" }}
+        className={`relative w-full max-w-lg bg-[#111] flex flex-col max-h-[88dvh] border-t-2 border-[#C8102E] transition-all duration-300 ${
+          visible
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 translate-y-3"
+        }`}
+        style={{ boxShadow: "5px 5px 0 #C8102E" }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* ── Sticky top bar with close button ── */}
+        {/* Sticky top bar */}
         <div className="sticky top-0 z-10 bg-[#111] border-b border-[#1A1A1A] flex items-center justify-between px-5 py-3 shrink-0">
           <span
             className="text-[#C8102E] text-[9px] uppercase tracking-[0.4em]"
@@ -67,7 +80,7 @@ export default function ProductModal() {
           </button>
         </div>
 
-        {/* ── Scrollable body ── */}
+        {/* Scrollable body */}
         <div className="overflow-y-auto flex-1">
 
           {/* Image */}
@@ -136,10 +149,7 @@ export default function ProductModal() {
                 </p>
                 <ul>
                   {ingredients.map((ing, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center justify-between border-b border-[#1A1A1A] py-2.5"
-                    >
+                    <li key={i} className="flex items-center justify-between border-b border-[#1A1A1A] py-2.5">
                       <span className="text-[#F5EFE6] text-sm" style={{ fontFamily: "var(--font-manrope)" }}>
                         {ing.name}
                       </span>
@@ -161,9 +171,7 @@ export default function ProductModal() {
                   className="text-[#6B6660] text-[10px] uppercase tracking-[0.35em] mb-1"
                   style={{ fontFamily: "var(--font-space-mono)" }}
                 >
-                  {product.priceDelivery && product.priceDelivery !== product.priceLocal
-                    ? "Precio local"
-                    : "Precio"}
+                  {product.priceDelivery && product.priceDelivery !== product.priceLocal ? "Precio local" : "Precio"}
                 </p>
                 <span
                   className="text-[#C8102E] text-4xl font-bold tabular-nums"
@@ -172,7 +180,6 @@ export default function ProductModal() {
                   ${product.priceLocal.toLocaleString("es-CL")}
                 </span>
               </div>
-
               {product.priceDelivery && product.priceDelivery !== product.priceLocal && (
                 <div className="text-right">
                   <p
