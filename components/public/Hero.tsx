@@ -36,7 +36,7 @@ export default function Hero() {
 
           {/* Title — 3 equal lines */}
           <h1
-            className="uppercase leading-[1] md:leading-[0.88] mb-4 md:mb-6 animate-fade-up delay-100"
+            className="uppercase leading-[1.15] md:leading-[1.05] mb-4 md:mb-6 animate-fade-up delay-100"
             style={{ fontFamily: "var(--font-anton)" }}
           >
             <span className="block text-[#F5EFE6] text-[clamp(4rem,12vw,7.5rem)]">American</span>
