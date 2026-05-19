@@ -54,14 +54,14 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* Content — flex-1 so all cards stretch to same height in a row */}
       <div className="flex flex-col flex-1 p-3 md:p-4 gap-2">
         <h3
-          className="text-[#F5EFE6] uppercase leading-tight text-base md:text-lg"
+          className="text-[#F5EFE6] uppercase leading-tight text-lg md:text-xl"
           style={{ fontFamily: "var(--font-anton)" }}
         >
           {product.name}
         </h3>
 
         <p
-          className="text-[#6B6660] text-[11px] md:text-xs leading-relaxed flex-1 line-clamp-3"
+          className="text-[#6B6660] text-xs md:text-[13px] leading-relaxed flex-1 line-clamp-3"
           style={{ fontFamily: "var(--font-manrope)" }}
         >
           {product.description}
@@ -69,14 +69,14 @@ export default function ProductCard({ product }: { product: Product }) {
 
         <div className="pt-2 mt-auto border-t border-[#2a2a2a] flex items-center justify-between gap-2">
           <span
-            className="text-[#C8102E] text-sm md:text-base font-bold tabular-nums"
+            className="text-[#C8102E] text-base md:text-lg font-bold tabular-nums"
             style={{ fontFamily: "var(--font-space-mono)" }}
           >
             ${price.toLocaleString("es-CL")}
           </span>
           {product.priceDelivery && product.priceDelivery !== product.priceLocal && (
             <span
-              className="text-[#6B6660] text-[9px] uppercase tracking-wide"
+              className="text-[#6B6660] text-[11px] uppercase tracking-wide"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Del. ${product.priceDelivery.toLocaleString("es-CL")}

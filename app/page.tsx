@@ -53,21 +53,24 @@ export default async function HomePage() {
                   {/* Section header */}
                   <FadeIn className="flex items-end justify-between mb-8 md:mb-12">
                     <div>
-                      <p
-                        className="text-[#C8102E] text-[10px] uppercase tracking-[0.45em] mb-1.5"
-                        style={{ fontFamily: "var(--font-space-mono)" }}
-                      >
-                        ── {String(catIdx + 1).padStart(2, "0")}
-                      </p>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-[#C8102E] text-xs tracking-[0.4em]">★</span>
+                        <p
+                          className="text-[#C8102E] text-xs uppercase tracking-[0.4em]"
+                          style={{ fontFamily: "var(--font-space-mono)" }}
+                        >
+                          {String(catIdx + 1).padStart(2, "0")}
+                        </p>
+                      </div>
                       <h2
-                        className="text-[#F5EFE6] text-[clamp(2.2rem,6vw,4.5rem)] uppercase leading-none"
+                        className="text-[#F5EFE6] text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-none"
                         style={{ fontFamily: "var(--font-anton)" }}
                       >
                         {category.name}
                       </h2>
                     </div>
                     <span
-                      className="text-[#2a2a2a] text-[10px] uppercase tracking-widest hidden md:block tabular-nums"
+                      className="text-[#6B6660] text-xs uppercase tracking-widest hidden md:block tabular-nums"
                       style={{ fontFamily: "var(--font-space-mono)" }}
                     >
                       {category.products.length} productos
@@ -103,6 +106,13 @@ export default async function HomePage() {
               </div>
             );
           })}
+        </div>
+
+        {/* ── USA divider ── */}
+        <div className="flex h-2">
+          <div className="flex-1 bg-[#C8102E]" />
+          <div className="flex-1 bg-[#F5EFE6]" />
+          <div className="flex-1 bg-[#1B3A6B]" />
         </div>
 
         {/* ── Google Reviews ── */}
