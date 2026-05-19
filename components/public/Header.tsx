@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Hamburguesas", href: "#hamburguesas" },
@@ -37,20 +38,16 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-5 md:px-10 h-16 flex items-center justify-between gap-6">
 
-          {/* Brand name */}
-          <Link href="/" className="flex flex-col leading-none shrink-0" onClick={() => setMenuOpen(false)}>
-            <span
-              className="text-[#C8102E] text-[8px] tracking-[0.35em] uppercase"
-              style={{ fontFamily: "var(--font-space-mono)" }}
-            >
-              Est. Providencia
-            </span>
-            <span
-              className="text-[#F5EFE6] text-base uppercase tracking-wider"
-              style={{ fontFamily: "var(--font-anton)" }}
-            >
-              American Prime Burger
-            </span>
+          {/* Logo */}
+          <Link href="/" className="flex items-center shrink-0" onClick={() => setMenuOpen(false)}>
+            <Image
+              src="/images/logo-white.png"
+              alt="American Prime Burger"
+              width={200}
+              height={60}
+              className="h-9 md:h-10 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav — menu sections */}
