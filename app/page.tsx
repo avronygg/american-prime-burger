@@ -96,7 +96,7 @@ export default async function HomePage() {
                   ) : (
                     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
                       {category.products.map((product, i) => (
-                        <FadeIn key={product.id} direction="up" delay={i * 60}>
+                        <FadeIn key={product.id} direction="up" delay={i * 60} className="h-full">
                           <ProductCard product={product} />
                         </FadeIn>
                       ))}
@@ -108,11 +108,16 @@ export default async function HomePage() {
           })}
         </div>
 
-        {/* ── USA divider ── */}
+        {/* ── USA flag divider: blue canton + red/white stripes ── */}
         <div className="flex h-2">
-          <div className="flex-1 bg-[#C8102E]" />
-          <div className="flex-1 bg-[#F5EFE6]" />
-          <div className="flex-1 bg-[#1B3A6B]" />
+          <div className="w-16 bg-[#1B3A6B] shrink-0" />
+          <div className="flex-[3] bg-[#C8102E]" />
+          <div className="flex-[1] bg-[#F5EFE6]" />
+          <div className="flex-[3] bg-[#C8102E]" />
+          <div className="flex-[1] bg-[#F5EFE6]" />
+          <div className="flex-[3] bg-[#C8102E]" />
+          <div className="flex-[1] bg-[#F5EFE6]" />
+          <div className="flex-[3] bg-[#C8102E]" />
         </div>
 
         {/* ── Google Reviews ── */}

@@ -6,11 +6,16 @@ export default function Hero() {
       {/* Left red accent line */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#C8102E] z-10" />
 
-      {/* USA flag stripe — top decoration */}
-      <div className="absolute top-0 left-0 right-0 flex h-[3px] z-20">
-        <div className="flex-1 bg-[#C8102E]" />
-        <div className="flex-1 bg-[#F5EFE6]" />
-        <div className="flex-1 bg-[#1B3A6B]" />
+      {/* USA flag stripe — top decoration: blue canton + red/white stripes */}
+      <div className="absolute top-0 left-0 right-0 flex h-[4px] z-20">
+        <div className="w-10 bg-[#1B3A6B] shrink-0" />
+        <div className="flex-[3] bg-[#C8102E]" />
+        <div className="flex-[1] bg-[#F5EFE6]" />
+        <div className="flex-[3] bg-[#C8102E]" />
+        <div className="flex-[1] bg-[#F5EFE6]" />
+        <div className="flex-[3] bg-[#C8102E]" />
+        <div className="flex-[1] bg-[#F5EFE6]" />
+        <div className="flex-[3] bg-[#C8102E]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 w-full pt-24 pb-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -20,11 +25,18 @@ export default function Hero() {
 
           {/* Location badge */}
           <div className="flex items-center gap-3 mb-6 animate-fade-up">
-            {/* Mini flag */}
-            <div className="flex flex-col overflow-hidden w-7 h-5 shrink-0 border border-[#2a2a2a]">
-              <div className="flex-1 bg-[#C8102E]" />
-              <div className="flex-1 bg-[#F5EFE6]" />
-              <div className="flex-1 bg-[#1B3A6B]" />
+            {/* Mini USA flag: horizontal stripes + blue canton */}
+            <div className="relative overflow-hidden w-7 h-5 shrink-0 border border-[#2a2a2a]">
+              <div className="absolute inset-0 flex flex-col">
+                <div className="flex-1 bg-[#C8102E]" />
+                <div className="flex-1 bg-[#F5EFE6]" />
+                <div className="flex-1 bg-[#C8102E]" />
+                <div className="flex-1 bg-[#F5EFE6]" />
+                <div className="flex-1 bg-[#C8102E]" />
+                <div className="flex-1 bg-[#F5EFE6]" />
+                <div className="flex-1 bg-[#C8102E]" />
+              </div>
+              <div className="absolute top-0 left-0 w-[42%] h-[57%] bg-[#1B3A6B]" />
             </div>
             <p
               className="text-[#C8102E] text-xs tracking-[0.4em] uppercase"

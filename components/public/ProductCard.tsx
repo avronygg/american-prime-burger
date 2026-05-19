@@ -6,7 +6,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <div
-      className="group relative bg-[#1A1A1A] flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1"
+      className="group relative bg-[#1A1A1A] flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 h-full"
       style={{ boxShadow: "3px 3px 0 #C8102E" }}
     >
       {/* Image — fixed 1:1 ratio */}
@@ -52,7 +52,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Content — flex-1 so all cards stretch to same height in a row */}
-      <div className="flex flex-col flex-1 p-3 md:p-4 gap-2">
+      <div className="flex flex-col flex-1 p-3 md:p-4 gap-2 min-h-[120px]">
         <h3
           className="text-[#F5EFE6] uppercase leading-tight text-lg md:text-xl"
           style={{ fontFamily: "var(--font-anton)" }}
