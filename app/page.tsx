@@ -5,6 +5,7 @@ import CategoryNav from "@/components/public/CategoryNav";
 import ProductCard from "@/components/public/ProductCard";
 import DrinkCard from "@/components/public/DrinkCard";
 import FadeIn from "@/components/public/FadeIn";
+import MarqueeStrip from "@/components/public/MarqueeStrip";
 import Reviews from "@/components/public/Reviews";
 import MapSection from "@/components/public/MapSection";
 import Footer from "@/components/public/Footer";
@@ -16,6 +17,11 @@ const DRINK_SLUGS = ["liquidos"];
 const SECTION_DISPLAY_NAMES: Record<string, string> = {
   hamburguesas: "Hamburguesas americanas",
   sandwich: "Sándwiches ahumados",
+};
+
+const SECTION_SUBTITLES: Record<string, string> = {
+  hamburguesas: "Todas las hamburguesas incluyen papas fritas.",
+  sandwich: "Carnes ahumadas 100% en casa con recetas propias.",
 };
 
 export default async function HomePage() {
@@ -35,6 +41,9 @@ export default async function HomePage() {
         {/* ── Hero ── */}
         <Hero />
 
+        {/* ── Marquee strip ── */}
+        <MarqueeStrip />
+
         {/* ── Sticky category nav ── */}
         <CategoryNav
           categories={categories.map((c) => ({ id: c.id, slug: c.slug, name: c.name }))}
@@ -44,6 +53,7 @@ export default async function HomePage() {
         <div id="menu" className="bg-[#0F0F0F]">
           {categories.map((category, catIdx) => {
             const isDrinks = DRINK_SLUGS.includes(category.slug);
+            const subtitle = SECTION_SUBTITLES[category.slug];
 
             return (
               <div
@@ -56,30 +66,21 @@ export default async function HomePage() {
                 <div className="max-w-7xl mx-auto px-5 md:px-10">
 
                   {/* Section header */}
-                  <FadeIn className="flex items-end justify-between mb-8 md:mb-12">
-                    <div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-[#C8102E] text-xs tracking-[0.4em]">★</span>
-                        <p
-                          className="text-[#C8102E] text-xs uppercase tracking-[0.4em]"
-                          style={{ fontFamily: "var(--font-space-mono)" }}
-                        >
-                          {String(catIdx + 1).padStart(2, "0")}
-                        </p>
-                      </div>
-                      <h2
-                        className="text-[#F5EFE6] text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-none"
-                        style={{ fontFamily: "var(--font-anton)" }}
-                      >
-                        {SECTION_DISPLAY_NAMES[category.slug] ?? category.name}
-                      </h2>
-                    </div>
-                    <span
-                      className="text-[#6B6660] text-xs uppercase tracking-widest hidden md:block tabular-nums"
-                      style={{ fontFamily: "var(--font-space-mono)" }}
+                  <FadeIn className="mb-8 md:mb-12">
+                    <h2
+                      className="text-[#F5EFE6] text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-none"
+                      style={{ fontFamily: "var(--font-anton)" }}
                     >
-                      {category.products.length} productos
-                    </span>
+                      {SECTION_DISPLAY_NAMES[category.slug] ?? category.name}
+                    </h2>
+                    {subtitle && (
+                      <p
+                        className="text-[#6B6660] text-sm md:text-base mt-3 max-w-xl"
+                        style={{ fontFamily: "var(--font-manrope)" }}
+                      >
+                        {subtitle}
+                      </p>
+                    )}
                   </FadeIn>
 
                   {/* Products */}
@@ -112,6 +113,9 @@ export default async function HomePage() {
             );
           })}
         </div>
+
+        {/* ── Marquee strip (dark variant) before reviews ── */}
+        <MarqueeStrip variant="dark" />
 
         {/* ── USA flag divider: blue canton ★ + repeating red/white stripes ── */}
         <div className="flex h-2">
