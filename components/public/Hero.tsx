@@ -72,7 +72,7 @@ export default function Hero() {
             className="text-[#6B6660] text-sm md:text-base leading-relaxed mb-6 max-w-md animate-fade-up delay-150"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
-            Hamburguesas 100&nbsp;% americanas con carne 100&nbsp;% Angus americano y sándwiches ahumados de la casa.
+            Carnes Angus Americano 100% en toda preparación. Hamburguesas y Sándwiches Ahumados.
           </p>
 
           {/* Quality seals */}

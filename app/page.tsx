@@ -20,8 +20,8 @@ const SECTION_DISPLAY_NAMES: Record<string, string> = {
 };
 
 const SECTION_SUBTITLES: Record<string, string> = {
-  hamburguesas: "Todas las hamburguesas incluyen papas fritas.",
-  sandwich: "Carnes ahumadas 100% en casa con recetas propias.",
+  hamburguesas: "Todas las hamburguesas son de carne Angus. Cada una incluye papas fritas.",
+  sandwich: "Carnes ahumadas preparadas entre 12 a 16 horas. Recetas propias sin atajos.",
 };
 
 export default async function HomePage() {
