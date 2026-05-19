@@ -13,6 +13,11 @@ export const revalidate = 60;
 
 const DRINK_SLUGS = ["liquidos"];
 
+const SECTION_DISPLAY_NAMES: Record<string, string> = {
+  hamburguesas: "Hamburguesas americanas",
+  sandwich: "Sándwiches ahumados",
+};
+
 export default async function HomePage() {
   const categories = await prisma.category.findMany({
     where: { active: true },
@@ -66,7 +71,7 @@ export default async function HomePage() {
                         className="text-[#F5EFE6] text-[clamp(2.4rem,6vw,4.5rem)] uppercase leading-none"
                         style={{ fontFamily: "var(--font-anton)" }}
                       >
-                        {category.name}
+                        {SECTION_DISPLAY_NAMES[category.slug] ?? category.name}
                       </h2>
                     </div>
                     <span
@@ -108,16 +113,15 @@ export default async function HomePage() {
           })}
         </div>
 
-        {/* ── USA flag divider: blue canton + red/white stripes ── */}
+        {/* ── USA flag divider: blue canton ★ + repeating red/white stripes ── */}
         <div className="flex h-2">
-          <div className="w-16 bg-[#1B3A6B] shrink-0" />
-          <div className="flex-[3] bg-[#C8102E]" />
-          <div className="flex-[1] bg-[#F5EFE6]" />
-          <div className="flex-[3] bg-[#C8102E]" />
-          <div className="flex-[1] bg-[#F5EFE6]" />
-          <div className="flex-[3] bg-[#C8102E]" />
-          <div className="flex-[1] bg-[#F5EFE6]" />
-          <div className="flex-[3] bg-[#C8102E]" />
+          <div className="w-10 bg-[#1B3A6B] shrink-0 flex items-center justify-center">
+            <span className="text-[#F5EFE6] text-[7px] leading-none">★</span>
+          </div>
+          <div
+            className="flex-1"
+            style={{ background: "repeating-linear-gradient(90deg, #C8102E 0px, #C8102E 30px, #F5EFE6 30px, #F5EFE6 60px)" }}
+          />
         </div>
 
         {/* ── Google Reviews ── */}

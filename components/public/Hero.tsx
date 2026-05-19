@@ -6,16 +6,15 @@ export default function Hero() {
       {/* Left red accent line */}
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#C8102E] z-10" />
 
-      {/* USA flag stripe — top decoration: blue canton + red/white stripes */}
-      <div className="absolute top-0 left-0 right-0 flex h-[4px] z-20">
-        <div className="w-10 bg-[#1B3A6B] shrink-0" />
-        <div className="flex-[3] bg-[#C8102E]" />
-        <div className="flex-[1] bg-[#F5EFE6]" />
-        <div className="flex-[3] bg-[#C8102E]" />
-        <div className="flex-[1] bg-[#F5EFE6]" />
-        <div className="flex-[3] bg-[#C8102E]" />
-        <div className="flex-[1] bg-[#F5EFE6]" />
-        <div className="flex-[3] bg-[#C8102E]" />
+      {/* USA flag stripe — top decoration: blue canton ★ + repeating red/white stripes */}
+      <div className="absolute top-0 left-0 right-0 flex h-[5px] z-20">
+        <div className="w-8 bg-[#1B3A6B] shrink-0 flex items-center justify-center">
+          <span className="text-[#F5EFE6] text-[4px] leading-none">★</span>
+        </div>
+        <div
+          className="flex-1"
+          style={{ background: "repeating-linear-gradient(90deg, #C8102E 0px, #C8102E 20px, #F5EFE6 20px, #F5EFE6 40px)" }}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-10 w-full pt-24 pb-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
