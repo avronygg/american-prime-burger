@@ -22,6 +22,18 @@ export default function Hero() {
         {/* ── LEFT: Copy ── */}
         <div className="relative z-10">
 
+          {/* Logo */}
+          <div className="mb-5 animate-fade-up">
+            <Image
+              src="/images/logo-white.png"
+              alt="American Prime Burger"
+              width={260}
+              height={80}
+              className="h-16 md:h-20 w-auto object-contain"
+              priority
+            />
+          </div>
+
           {/* Location badge */}
           <div className="flex items-center gap-3 mb-6 animate-fade-up">
             {/* Mini USA flag: horizontal stripes + blue canton */}
@@ -45,44 +57,38 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Title — 3 lines proportional */}
+          {/* Title — 3 equal lines */}
           <h1
-            className="uppercase leading-[0.9] mb-8 animate-fade-up delay-100"
+            className="uppercase leading-[0.9] mb-6 animate-fade-up delay-100"
             style={{ fontFamily: "var(--font-anton)" }}
           >
             <span className="block text-[#F5EFE6] text-[clamp(3rem,9vw,7.5rem)]">American</span>
             <span className="block text-[#C8102E]  text-[clamp(3rem,9vw,7.5rem)]">Prime</span>
-            <span className="block text-[#F5EFE6]  text-[clamp(2.4rem,7.5vw,6.2rem)]">Burger</span>
+            <span className="block text-[#F5EFE6]  text-[clamp(3rem,9vw,7.5rem)]">Burger</span>
           </h1>
 
-          {/* Stars divider */}
-          <div className="flex items-center gap-3 mb-6 animate-fade-up delay-150">
-            <div className="h-px flex-1 bg-[#1A1A1A]" />
-            <span className="text-[#C8102E] text-xs tracking-[0.5em]">★ ★ ★</span>
-            <div className="h-px flex-1 bg-[#1A1A1A]" />
-          </div>
+          {/* Subtitle */}
+          <p
+            className="text-[#6B6660] text-sm md:text-base leading-relaxed mb-6 max-w-md animate-fade-up delay-150"
+            style={{ fontFamily: "var(--font-manrope)" }}
+          >
+            Hamburguesas 100&nbsp;% americanas con carne 100&nbsp;% Angus americano y sándwiches ahumados de la casa.
+          </p>
 
-          {/* Stats */}
-          <div className="flex flex-wrap gap-x-8 gap-y-4 mb-8 animate-fade-up delay-200">
+          {/* Quality seals */}
+          <div className="flex flex-wrap gap-2 mb-8 animate-fade-up delay-200">
             {[
-              { value: "100%", label: "Angus Americano" },
-              { value: "12h",  label: "Ahumado lento"   },
-              { value: "4.8★", label: "Google Reviews"  },
-            ].map((s) => (
-              <div key={s.label} className="flex flex-col">
-                <span
-                  className="text-[#C8102E] text-xl font-bold leading-none"
-                  style={{ fontFamily: "var(--font-space-mono)" }}
-                >
-                  {s.value}
-                </span>
-                <span
-                  className="text-[#6B6660] text-[11px] uppercase tracking-widest mt-1"
-                  style={{ fontFamily: "var(--font-manrope)" }}
-                >
-                  {s.label}
-                </span>
-              </div>
+              "★ Carne 100% Angus americano",
+              "♨ Ahumado 12 horas",
+              "4.8★ Google Reviews",
+            ].map((seal) => (
+              <span
+                key={seal}
+                className="border border-[#C8102E]/60 text-[#F5EFE6] text-[10px] md:text-[11px] uppercase tracking-[0.2em] px-3 py-1.5"
+                style={{ fontFamily: "var(--font-space-mono)" }}
+              >
+                {seal}
+              </span>
             ))}
           </div>
 
@@ -123,34 +129,9 @@ export default function Hero() {
             <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-[#0F0F0F]/50 to-transparent" />
           </div>
 
-          {/* Floating badge */}
-          <div className="absolute -bottom-4 -left-4 bg-[#0F0F0F] border-2 border-[#C8102E] px-4 py-3 z-10">
-            <p
-              className="text-[#C8102E] text-[10px] uppercase tracking-[0.35em]"
-              style={{ fontFamily: "var(--font-space-mono)" }}
-            >
-              Carne Angus
-            </p>
-            <p
-              className="text-[#F5EFE6] text-xl uppercase leading-tight"
-              style={{ fontFamily: "var(--font-anton)" }}
-            >
-              Americana
-            </p>
-          </div>
         </div>
       </div>
 
-      {/* Scroll hint */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 hidden md:flex animate-fade-in delay-500">
-        <span
-          className="text-[#6B6660] text-[11px] uppercase tracking-[0.4em]"
-          style={{ fontFamily: "var(--font-space-mono)" }}
-        >
-          Scroll
-        </span>
-        <div className="w-px h-10 bg-gradient-to-b from-[#6B6660] to-transparent" />
-      </div>
     </section>
   );
 }
