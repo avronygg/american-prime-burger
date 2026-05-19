@@ -4,12 +4,6 @@ export default function MapSection() {
       <div className="max-w-7xl mx-auto px-5 md:px-10">
 
         <div className="mb-8 md:mb-12">
-          <p
-            className="text-[#C8102E] text-[10px] uppercase tracking-[0.4em] mb-1"
-            style={{ fontFamily: "var(--font-space-mono)" }}
-          >
-            ── Cómo llegar
-          </p>
           <h2
             className="text-[#F5EFE6] text-[clamp(2rem,5vw,4rem)] uppercase leading-none"
             style={{ fontFamily: "var(--font-anton)" }}

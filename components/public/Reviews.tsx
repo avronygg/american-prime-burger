@@ -54,12 +54,6 @@ export default function Reviews() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
           <div>
-            <p
-              className="text-[#C8102E] text-[10px] uppercase tracking-[0.4em] mb-1"
-              style={{ fontFamily: "var(--font-space-mono)" }}
-            >
-              ── Lo que dicen
-            </p>
             <h2
               className="text-[#F5EFE6] text-[clamp(2rem,5vw,4rem)] uppercase leading-none"
               style={{ fontFamily: "var(--font-anton)" }}
