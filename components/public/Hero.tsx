@@ -17,43 +17,43 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 w-full pt-24 pb-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 w-full pt-20 pb-12 md:pt-24 md:pb-16 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
 
         {/* ── LEFT: Copy ── */}
         <div className="relative z-10">
 
           {/* Logo */}
-          <div className="mb-8 animate-fade-up">
+          <div className="mb-5 md:mb-8 animate-fade-up">
             <Image
               src="/images/logo-white.png"
               alt="American Prime Burger"
               width={320}
               height={100}
-              className="h-20 md:h-28 w-auto object-contain"
+              className="h-14 md:h-28 w-auto object-contain"
               priority
             />
           </div>
 
           {/* Title — 3 equal lines */}
           <h1
-            className="uppercase leading-[0.9] mb-6 animate-fade-up delay-100"
+            className="uppercase leading-[1] md:leading-[0.88] mb-4 md:mb-6 animate-fade-up delay-100"
             style={{ fontFamily: "var(--font-anton)" }}
           >
-            <span className="block text-[#F5EFE6] text-[clamp(3rem,9vw,7.5rem)]">American</span>
-            <span className="block text-[#C8102E]  text-[clamp(3rem,9vw,7.5rem)]">Prime</span>
-            <span className="block text-[#F5EFE6]  text-[clamp(3rem,9vw,7.5rem)]">Burger</span>
+            <span className="block text-[#F5EFE6] text-[clamp(4rem,12vw,7.5rem)]">American</span>
+            <span className="block text-[#C8102E]  text-[clamp(4rem,12vw,7.5rem)]">Prime</span>
+            <span className="block text-[#F5EFE6]  text-[clamp(4rem,12vw,7.5rem)]">Burger</span>
           </h1>
 
           {/* Subtitle */}
           <p
-            className="text-[#6B6660] text-sm md:text-base leading-relaxed mb-6 max-w-md animate-fade-up delay-150"
+            className="text-[#6B6660] text-sm md:text-base leading-relaxed mb-4 md:mb-6 max-w-md animate-fade-up delay-150"
             style={{ fontFamily: "var(--font-manrope)" }}
           >
             Carnes Angus Americano 100% en toda preparación. Hamburguesas y Sándwiches Ahumados.
           </p>
 
           {/* Quality seals */}
-          <div className="flex flex-wrap gap-2 mb-8 animate-fade-up delay-200">
+          <div className="flex flex-wrap gap-2 mb-6 md:mb-8 animate-fade-up delay-200">
             {[
               "★ Carne 100% Angus americano",
               "♨ Ahumado 12 a 16 horas",
@@ -69,10 +69,10 @@ export default function Hero() {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-wrap items-center gap-4 animate-fade-up delay-300">
+          <div className="flex flex-wrap items-center gap-3 md:gap-4 animate-fade-up delay-300">
             <a
               href="#menu"
-              className="bg-[#C8102E] text-[#F5EFE6] px-8 py-4 text-sm uppercase tracking-[0.25em] font-bold hover:bg-[#8B0A1F] transition-colors"
+              className="bg-[#C8102E] text-[#F5EFE6] px-7 py-3.5 md:px-8 md:py-4 text-sm uppercase tracking-[0.25em] font-bold hover:bg-[#8B0A1F] transition-colors"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Ver menú
@@ -93,7 +93,7 @@ export default function Hero() {
         <div className="relative animate-slide-right delay-200">
           <div className="absolute inset-0 translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5 bg-[#C8102E]" />
 
-          <div className="relative w-full aspect-[4/5] overflow-hidden">
+          <div className="relative w-full aspect-[4/3] md:aspect-[4/5] overflow-hidden">
             <Image
               src="/images/hero.png"
               alt="American Prime Burger — las mejores hamburguesas de Providencia"
@@ -104,8 +104,8 @@ export default function Hero() {
             />
             <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-[#0F0F0F]/50 to-transparent" />
           </div>
-
         </div>
+
       </div>
 
     </section>
