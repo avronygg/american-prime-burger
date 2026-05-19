@@ -22,8 +22,8 @@ export default function Hero() {
         {/* ── LEFT: Copy ── */}
         <div className="relative z-10">
 
-          {/* Logo */}
-          <div className="mb-5 md:mb-8 animate-fade-up">
+          {/* Logo — hidden on mobile (nav already shows it) */}
+          <div className="hidden md:block mb-5 md:mb-8 animate-fade-up">
             <Image
               src="/images/logo-white.png"
               alt="American Prime Burger"

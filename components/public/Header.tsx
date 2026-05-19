@@ -45,7 +45,7 @@ export default function Header() {
               alt="American Prime Burger"
               width={200}
               height={60}
-              className="h-9 md:h-10 w-auto object-contain"
+              className="h-12 md:h-10 w-auto object-contain"
               priority
             />
           </Link>
@@ -121,7 +121,7 @@ export default function Header() {
             className="text-[#6B6660] text-4xl uppercase py-3 border-b border-[#1A1A1A] hover:text-[#C8102E] transition-colors"
             style={{ fontFamily: "var(--font-anton)" }}
           >
-            Locales
+            Información
           </a>
         </nav>
 
