@@ -32,7 +32,7 @@ async function main() {
   });
 
   // ── HAMBURGUESAS ──────────────────────────────────────────────────────────
-  // Listado definitivo (cliente, may-2026): 9 hamburguesas. Todas en pan brioche,
+  // Listado definitivo (cliente, may-2026): 11 hamburguesas. Todas en pan brioche,
   // todas de carne 100% Angus americano, todas incluyen 150 g de papas fritas.
   // priceDelivery queda null hasta que el cliente entregue los precios de delivery.
   await prisma.product.createMany({
@@ -203,6 +203,44 @@ async function main() {
         priceLocal: 11990,
         image: null,
         order: 9,
+      },
+      {
+        categoryId: hamburguesas.id,
+        name: "Pastrami Prime",
+        description:
+          "Hamburguesa de 150 g de carne 100% Angus americano con 100 g de pastrami, cebolla, pepinillos Heinz y salsa Mac Prime, en pan brioche. Incluye 150 g de papas fritas.",
+        ingredients: [
+          { name: "Carne 100% Angus americano", grams: 150 },
+          { name: "Pastrami", grams: 100 },
+          { name: "Cebolla" },
+          { name: "Pepinillos Heinz" },
+          { name: "Salsa Mac Prime" },
+          { name: "Pan brioche" },
+          { name: "Papas fritas", grams: 150 },
+        ],
+        priceLocal: 12990,
+        image: `${IMG}/2026/02/frame_139_1.webp`,
+        order: 10,
+      },
+      {
+        categoryId: hamburguesas.id,
+        name: "Texas Prime",
+        description:
+          "Hamburguesa de carne 100% Angus americano con pulled pork de 12 horas de cocción, queso americano, aros de cebolla, crujiente tocino ahumado y salsa BBQ Prime, en pan brioche. Incluye 150 g de papas fritas.",
+        ingredients: [
+          { name: "Carne 100% Angus americano" },
+          { name: "Pulled pork (12 h de cocción)" },
+          { name: "Queso americano" },
+          { name: "Aros de cebolla" },
+          { name: "Tocino ahumado" },
+          { name: "Salsa BBQ Prime" },
+          { name: "Pan brioche" },
+          { name: "Papas fritas", grams: 150 },
+        ],
+        priceLocal: 12990,
+        image: `${IMG}/2026/02/frame_150_1.webp`,
+        isNew: true,
+        order: 11,
       },
     ],
   });
