@@ -261,7 +261,7 @@ async function main() {
         name: "Sándwich Brisket",
         description: "Suave pan de papa con 200g de brisket Angus de la casa ahumado en roble francés, nuestra deliciosa salsa de cebolla caramelizada y crujiente mix de hojas.",
         priceLocal: 11990,
-        image: `${IMG}/2026/02/frame_144_1.webp`,
+        image: "/images/sandwich-brisket.png",
         order: 2,
       },
       {
@@ -269,7 +269,7 @@ async function main() {
         name: "Sándwich de Pastrami Prime",
         description: "Suave pan de papa, 200g de pastrami Angus de la casa ahumado en roble americano, queso fundido, pepinillos y mostaza.",
         priceLocal: 11990,
-        image: `${IMG}/2026/02/frame_147_1.webp`,
+        image: "/images/sandwich-pastrami-prime.png",
         order: 3,
       },
     ],
