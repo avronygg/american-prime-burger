@@ -69,7 +69,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 8990,
-        image: null,
+        image: "/images/cheeseburger.png",
         order: 2,
       },
       {
@@ -129,7 +129,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 11990,
-        image: null,
+        image: "/images/doble-traditional.png",
         order: 5,
       },
       {
@@ -201,7 +201,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 11990,
-        image: null,
+        image: "/images/doble-texas.png",
         order: 9,
       },
       {
