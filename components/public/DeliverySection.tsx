@@ -1,18 +1,15 @@
 import FadeIn from "./FadeIn";
 
-// TODO: reemplazar `href` por las URLs exactas del Linktree
-// (https://linktr.ee/AmericanPrimeBurgerDelivery) — Cloudflare bloquea el
-// scraping automático, así que hoy usamos URLs de búsqueda como fallback.
 const PLATFORMS = [
   {
     name: "PedidosYa",
     pitch: "Pídela y paga con app. Promos frecuentes y delivery rápido en Providencia.",
-    href: "https://www.pedidosya.cl/restaurantes/santiago/providencia/hamburguesas",
+    href: "https://www.pedidosya.cl/restaurantes/santiago/american-prime-burger-7fb747dc-ec48-4538-a56b-d3640984573c-menu",
   },
   {
     name: "Uber Eats",
     pitch: "Tracking en vivo del repartidor y entrega en minutos a la puerta.",
-    href: "https://www.ubereats.com/cl/search?q=american%20prime%20burger",
+    href: "https://www.ubereats.com/cl/store/american-prime-burger/owquGf-IVlyZitym0aaxAw?diningMode=DELIVERY",
   },
 ];
 
