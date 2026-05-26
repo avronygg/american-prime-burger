@@ -34,13 +34,39 @@ export default function Hero() {
             />
           </div>
 
-          {/* Pre-headline / kicker — sits above the wordmark */}
-          <p
-            className="text-[#C8102E] text-sm md:text-base font-medium leading-snug mb-4 md:mb-5 max-w-md animate-fade-up"
-            style={{ fontFamily: "var(--font-manrope)" }}
+          {/* Pre-headline tag — bandera USA vertical + sentencia en card oscura */}
+          <div
+            className="inline-flex items-stretch mb-5 md:mb-6 max-w-lg animate-fade-up"
+            style={{ boxShadow: "3px 3px 0 #C8102E" }}
           >
-            ¡Llegó la mejor hamburguesa directo desde Estados Unidos con el auténtico sabor americano!
-          </p>
+            {/* USA flag stripe — canton azul + estrella + franjas rojo/crema */}
+            <div className="flex flex-col w-3 shrink-0">
+              <div className="h-3 bg-[#1B3A6B] flex items-center justify-center">
+                <span className="text-[#F5EFE6] text-[8px] leading-none">★</span>
+              </div>
+              <div
+                className="flex-1"
+                style={{
+                  background:
+                    "repeating-linear-gradient(to bottom, #C8102E 0, #C8102E 3px, #F5EFE6 3px, #F5EFE6 6px)",
+                }}
+              />
+            </div>
+
+            {/* Body */}
+            <div className="bg-[#1A1A1A] px-4 py-3 flex-1">
+              <p
+                className="text-[#F5EFE6] text-sm md:text-base leading-snug"
+                style={{ fontFamily: "var(--font-manrope)" }}
+              >
+                ¡Llegó la mejor hamburguesa directo desde{" "}
+                <span className="text-[#C8102E] font-bold uppercase tracking-wide">
+                  Estados Unidos
+                </span>{" "}
+                con el auténtico sabor americano!
+              </p>
+            </div>
+          </div>
 
           {/* Title — 3 equal lines */}
           <h1
