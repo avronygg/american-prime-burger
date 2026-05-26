@@ -1,13 +1,20 @@
 import FadeIn from "./FadeIn";
 
+// Logos SVG oficiales (Wikimedia Commons). Para Uber Eats el "Uber" venía
+// en azul oscuro #142328 — lo cambié a #F5EFE6 (versión dark-mode oficial
+// de la marca) para que sea visible sobre nuestro fondo oscuro.
+// Servidos como <img> directo (no next/image) — los SVG locales no necesitan
+// optimización y next/image requiere dangerouslyAllowSVG, mejor evitarlo.
 const PLATFORMS = [
   {
     name: "PedidosYa",
+    logo: "/images/logos/pedidosya.svg",
     pitch: "Pídela y paga con app. Promos frecuentes y delivery rápido en Providencia.",
     href: "https://www.pedidosya.cl/restaurantes/santiago/american-prime-burger-7fb747dc-ec48-4538-a56b-d3640984573c-menu",
   },
   {
     name: "Uber Eats",
+    logo: "/images/logos/ubereats.svg",
     pitch: "Tracking en vivo del repartidor y entrega en minutos a la puerta.",
     href: "https://www.ubereats.com/cl/store/american-prime-burger/owquGf-IVlyZitym0aaxAw?diningMode=DELIVERY",
   },
@@ -53,22 +60,18 @@ export default function DeliverySection() {
                 className="group relative bg-[#1A1A1A] p-7 md:p-9 flex flex-col gap-4 h-full border border-[#222] transition-transform duration-300 hover:-translate-y-1 active:scale-[0.99] apb-focus-ring"
                 style={{ boxShadow: "4px 4px 0 #C8102E" }}
               >
-                <p
-                  className="text-[#6B6660] text-[10px] uppercase tracking-[0.35em]"
-                  style={{ fontFamily: "var(--font-space-mono)" }}
-                >
-                  Plataforma
-                </p>
-
-                <h3
-                  className="text-[#F5EFE6] text-3xl md:text-4xl uppercase leading-none"
-                  style={{ fontFamily: "var(--font-anton)" }}
-                >
-                  {p.name}
-                </h3>
+                {/* Logo real de la plataforma (SVG oficial, escala perfecta) */}
+                <div className="h-9 md:h-10 flex items-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    className="h-9 md:h-10 w-auto"
+                  />
+                </div>
 
                 <p
-                  className="text-[#A09890] text-sm leading-relaxed flex-1"
+                  className="text-[#A09890] text-sm leading-relaxed flex-1 mt-2"
                   style={{ fontFamily: "var(--font-manrope)" }}
                 >
                   {p.pitch}
