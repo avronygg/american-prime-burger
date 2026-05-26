@@ -283,7 +283,7 @@ async function main() {
         name: "Papas Fritas Individuales",
         description: "Porción individual de papas fritas.",
         priceLocal: 3990,
-        image: null,
+        image: "/images/papas-individuales.png",
         order: 1,
       },
       {
@@ -291,7 +291,7 @@ async function main() {
         name: "Papas Fritas Familiares",
         description: "Porción familiar de papas fritas para compartir.",
         priceLocal: 5990,
-        image: null,
+        image: "/images/papas-familiares.png",
         order: 2,
       },
       {
@@ -299,7 +299,7 @@ async function main() {
         name: "Costillas de Maíz",
         description: "300 g de costillas de maíz dulce americanas con nuestras deliciosas especias de la casa y mix de quesos.",
         priceLocal: 5990,
-        image: `${IMG}/2024/12/maiz.webp`,
+        image: "/images/costillas-maiz.png",
         order: 3,
       },
       {
@@ -307,7 +307,7 @@ async function main() {
         name: "Pollo Frito",
         description: "5 piezas de pollo apanado, crujientes y jugosos.",
         priceLocal: 8990,
-        image: null,
+        image: "/images/pollo-frito.png",
         order: 4,
       },
       {
@@ -315,7 +315,7 @@ async function main() {
         name: "Aros de Cebolla",
         description: "10 unidades de aros de cebolla acompañados de salsa BBQ y nuestra salsa de cebolla.",
         priceLocal: 3990,
-        image: null,
+        image: "/images/aros-de-cebolla.png",
         order: 5,
       },
     ],
