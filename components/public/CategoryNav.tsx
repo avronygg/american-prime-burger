@@ -44,7 +44,7 @@ export default function CategoryNav({ categories }: { categories: Category[] }) 
             <button
               key={cat.id}
               onClick={() => scrollTo(cat.slug)}
-              className={`relative px-4 md:px-5 py-4 text-[11px] uppercase tracking-[0.2em] transition-all duration-200 whitespace-nowrap ${
+              className={`relative px-4 md:px-5 py-4 text-[11px] uppercase tracking-[0.2em] transition-all duration-200 whitespace-nowrap cursor-pointer apb-focus-ring ${
                 active === cat.slug
                   ? "text-[#F5EFE6]"
                   : "text-[#6B6660] hover:text-[#F5EFE6]"

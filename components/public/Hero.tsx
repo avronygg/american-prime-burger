@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-3 md:gap-4 animate-fade-up delay-300">
             <a
               href="#menu"
-              className="bg-[#C8102E] text-[#F5EFE6] px-7 py-3.5 md:px-8 md:py-4 text-sm uppercase tracking-[0.25em] font-bold hover:bg-[#8B0A1F] transition-colors"
+              className="bg-[#C8102E] text-[#F5EFE6] px-7 py-3.5 md:px-8 md:py-4 text-sm uppercase tracking-[0.25em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.97] apb-focus-ring"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Ver menú
@@ -81,10 +81,10 @@ export default function Hero() {
               href="https://linktr.ee/AmericanPrimeBurgerDelivery"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#F5EFE6] text-sm uppercase tracking-[0.25em] hover:text-[#C8102E] transition-colors flex items-center gap-2"
+              className="group text-[#F5EFE6] text-sm uppercase tracking-[0.25em] hover:text-[#C8102E] transition-colors flex items-center gap-2 apb-focus-ring"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
-              Pedir delivery <span className="text-[#C8102E]">→</span>
+              Pedir delivery <span className="text-[#C8102E] inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
             </a>
           </div>
         </div>

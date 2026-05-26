@@ -71,7 +71,7 @@ export default function ProductModal() {
           </span>
           <button
             onClick={close}
-            className="w-8 h-8 flex items-center justify-center bg-[#1A1A1A] border border-[#2a2a2a] text-[#6B6660] hover:text-[#F5EFE6] hover:border-[#C8102E] transition-colors"
+            className="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#2a2a2a] text-[#6B6660] hover:text-[#F5EFE6] hover:border-[#C8102E] transition-all duration-200 ease-out active:scale-95 cursor-pointer apb-focus-ring"
             aria-label="Cerrar"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3.5 h-3.5">

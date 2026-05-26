@@ -16,7 +16,7 @@ export default function ProductCard({ product }: { product: Product }) {
       tabIndex={0}
       onClick={openModal}
       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") openModal(); }}
-      className="group relative bg-[#1A1A1A] flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 h-full cursor-pointer"
+      className="group relative bg-[#1A1A1A] flex flex-col overflow-hidden transition-transform duration-300 hover:-translate-y-1 active:scale-[0.985] h-full cursor-pointer apb-focus-ring"
       style={{ boxShadow: "3px 3px 0 #C8102E" }}
     >
       {/* Image */}
@@ -64,7 +64,7 @@ export default function ProductCard({ product }: { product: Product }) {
             ${price.toLocaleString("es-CL")}
           </span>
           <span className="text-[#6B6660] text-[10px] uppercase tracking-wide group-hover:text-[#C8102E] transition-colors" style={{ fontFamily: "var(--font-space-mono)" }}>
-            Ver más →
+            Ver más <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
           </span>
         </div>
       </div>

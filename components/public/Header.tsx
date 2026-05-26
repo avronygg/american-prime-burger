@@ -56,7 +56,7 @@ export default function Header() {
               <a
                 key={l.label}
                 href={l.href}
-                className="text-[#6B6660] hover:text-[#F5EFE6] transition-colors px-3 py-2 text-[11px] uppercase tracking-[0.2em] hover:bg-[#1A1A1A]"
+                className="text-[#6B6660] hover:text-[#F5EFE6] transition-colors px-3 py-2 text-[11px] uppercase tracking-[0.2em] hover:bg-[#1A1A1A] apb-focus-ring"
                 style={{ fontFamily: "var(--font-space-mono)" }}
               >
                 {l.label}
@@ -68,7 +68,7 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <a
               href="#locales"
-              className="text-[#6B6660] hover:text-[#F5EFE6] transition-colors text-[11px] uppercase tracking-[0.2em]"
+              className="text-[#6B6660] hover:text-[#F5EFE6] transition-colors text-[11px] uppercase tracking-[0.2em] apb-focus-ring"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Cómo llegar
@@ -77,18 +77,20 @@ export default function Header() {
               href="https://linktr.ee/AmericanPrimeBurgerDelivery"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#C8102E] text-[#F5EFE6] px-4 py-2 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-[#8B0A1F] transition-colors"
+              className="group bg-[#C8102E] text-[#F5EFE6] px-4 py-2 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.97] apb-focus-ring"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
-              Pedir →
+              Pedir <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
             </a>
           </div>
 
-          {/* Mobile: hamburger button */}
+          {/* Mobile: hamburger button (44×44 touch target per a11y) */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 shrink-0"
+            className="md:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 shrink-0 cursor-pointer apb-focus-ring active:scale-95 transition-transform"
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <span className={`block h-[2px] bg-[#F5EFE6] transition-all duration-300 origin-center ${menuOpen ? "rotate-45 translate-y-[7px] w-6" : "w-6"}`} />
             <span className={`block h-[2px] bg-[#F5EFE6] transition-all duration-300 ${menuOpen ? "opacity-0 w-0" : "w-4"}`} />
@@ -99,6 +101,7 @@ export default function Header() {
 
       {/* Mobile fullscreen menu */}
       <div
+        id="mobile-menu"
         className={`fixed inset-0 z-40 bg-[#0F0F0F] flex flex-col pt-24 pb-10 px-8 transition-all duration-400 ${
           menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full pointer-events-none"
         }`}
@@ -109,7 +112,7 @@ export default function Header() {
               key={l.label}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="text-[#F5EFE6] text-4xl uppercase py-3 border-b border-[#1A1A1A] hover:text-[#C8102E] transition-colors"
+              className="text-[#F5EFE6] text-4xl uppercase py-3 border-b border-[#1A1A1A] hover:text-[#C8102E] transition-colors apb-focus-ring"
               style={{ fontFamily: "var(--font-anton)", animationDelay: `${i * 60}ms` }}
             >
               {l.label}
@@ -118,7 +121,7 @@ export default function Header() {
           <a
             href="#locales"
             onClick={() => setMenuOpen(false)}
-            className="text-[#6B6660] text-4xl uppercase py-3 border-b border-[#1A1A1A] hover:text-[#C8102E] transition-colors"
+            className="text-[#6B6660] text-4xl uppercase py-3 border-b border-[#1A1A1A] hover:text-[#C8102E] transition-colors apb-focus-ring"
             style={{ fontFamily: "var(--font-anton)" }}
           >
             Información
@@ -129,10 +132,10 @@ export default function Header() {
           href="https://linktr.ee/AmericanPrimeBurgerDelivery"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#C8102E] text-[#F5EFE6] py-4 text-center text-sm uppercase tracking-[0.3em] font-bold hover:bg-[#8B0A1F] transition-colors mt-auto"
+          className="group bg-[#C8102E] text-[#F5EFE6] py-4 text-center text-sm uppercase tracking-[0.3em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.98] apb-focus-ring mt-auto"
           style={{ fontFamily: "var(--font-space-mono)" }}
         >
-          Pedir delivery →
+          Pedir delivery <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
         </a>
 
         <p

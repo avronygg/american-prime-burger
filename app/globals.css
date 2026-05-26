@@ -80,3 +80,25 @@ body::before {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* Brand-colored text selection */
+::selection { background: var(--apb-red); color: var(--apb-cream); }
+
+/* Keyboard-visible focus ring (brand red, hard offset — no soft halo) */
+.apb-focus-ring:focus-visible {
+  outline: 2px solid var(--apb-red);
+  outline-offset: 3px;
+}
+
+/* Missing animation-delay step used by hero subtitle */
+.delay-150 { animation-delay: 0.15s; }
+
+/* Accessibility: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

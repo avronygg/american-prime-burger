@@ -19,6 +19,11 @@ export default function FadeIn({
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // Respect users who prefer reduced motion: skip the animation entirely.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
+      return;
+    }
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
