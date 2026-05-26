@@ -281,7 +281,7 @@ async function main() {
       {
         categoryId: compartir.id,
         name: "Papas Fritas Individuales",
-        description: "Porción individual de papas fritas.",
+        description: "Porción individual de papas fritas (150 g).",
         priceLocal: 3990,
         image: "/images/papas-individuales.png",
         order: 1,
@@ -289,7 +289,7 @@ async function main() {
       {
         categoryId: compartir.id,
         name: "Papas Fritas Familiares",
-        description: "Porción familiar de papas fritas para compartir.",
+        description: "Porción familiar de papas fritas para compartir (400 g).",
         priceLocal: 5990,
         image: "/images/papas-familiares.png",
         order: 2,
