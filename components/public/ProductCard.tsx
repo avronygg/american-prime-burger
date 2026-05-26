@@ -37,23 +37,14 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
-        {/* USA flag badge — canton azul con estrella + franjas rojo/crema */}
-        <div
-          className="absolute top-2 right-2 flex h-[20px] w-[36px] overflow-hidden z-10"
+        {/* Bandera oficial de Estados Unidos (SVG Wikimedia: 13 franjas + 50 estrellas) */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/flags/usa.svg"
+          alt="Bandera de Estados Unidos"
+          className="absolute top-2 right-2 h-5 w-[38px] z-10"
           style={{ boxShadow: "1.5px 1.5px 0 #0F0F0F" }}
-          aria-label="USA"
-        >
-          <div className="w-[13px] bg-[#1B3A6B] shrink-0 flex items-center justify-center">
-            <span className="text-[#F5EFE6] text-[9px] leading-none">★</span>
-          </div>
-          <div
-            className="flex-1"
-            style={{
-              background:
-                "repeating-linear-gradient(to bottom, #C8102E 0, #C8102E 3px, #F5EFE6 3px, #F5EFE6 6px)",
-            }}
-          />
-        </div>
+        />
 
         <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
           {product.isNew && (
