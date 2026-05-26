@@ -61,8 +61,9 @@ export default function MapSection() {
               </p>
               <div className="space-y-1" style={{ fontFamily: "var(--font-space-mono)" }}>
                 {[
-                  { days: "Lun – Vie", hours: "12:00 – 22:00" },
-                  { days: "Sáb – Dom", hours: "12:00 – 23:00" },
+                  { days: "Lun y Jue",     hours: "11:00 – 21:30" },
+                  { days: "Mar, Mié, Vie", hours: "10:45 – 21:30" },
+                  { days: "Sáb y Dom",     hours: "10:30 – 21:30" },
                 ].map((h) => (
                   <div key={h.days} className="flex justify-between gap-4">
                     <span className="text-[#6B6660] text-xs">{h.days}</span>

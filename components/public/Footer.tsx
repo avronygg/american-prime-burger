@@ -44,8 +44,9 @@ export default function Footer() {
           </address>
           <div style={{ fontFamily: "var(--font-space-mono)" }}>
             <p className="text-[#6B6660] text-[10px] uppercase tracking-[0.3em] mb-2">Horario</p>
-            <p className="text-[#F5EFE6] text-xs">Lun – Vie · 12:00 – 22:00</p>
-            <p className="text-[#F5EFE6] text-xs">Sáb – Dom · 12:00 – 23:00</p>
+            <p className="text-[#F5EFE6] text-xs">Lun y Jue · 11:00 – 21:30</p>
+            <p className="text-[#F5EFE6] text-xs">Mar, Mié, Vie · 10:45 – 21:30</p>
+            <p className="text-[#F5EFE6] text-xs">Sáb y Dom · 10:30 – 21:30</p>
           </div>
         </div>
 
@@ -60,7 +61,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3 mb-8">
             {[
               { label: "Instagram", href: "https://www.instagram.com/americanprimeburger.cl" },
-              { label: "Facebook",  href: "https://www.facebook.com/americanprimeburger.cl" },
+              { label: "Facebook",  href: "https://www.facebook.com/profile.php?id=61558595158568" },
               { label: "TikTok",    href: "https://www.tiktok.com/@americanprimeburger.cl" },
             ].map((s) => (
               <a
