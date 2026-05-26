@@ -51,7 +51,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 5990,
-        image: `${IMG}/2026/02/frame_141_1.webp`,
+        image: "/images/prime-junior.png",
         isNew: true,
         order: 1,
       },
