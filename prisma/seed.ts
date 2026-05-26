@@ -40,7 +40,7 @@ async function main() {
       {
         categoryId: hamburguesas.id,
         tags: ["100% Angus"],
-        name: "Prime Junior",
+        name: "Prime Jr.",
         description:
           "Hamburguesa de 110 g de carne 100% Angus americano con doble queso cheddar y kétchup, en pan brioche. Incluye 150 g de papas fritas.",
         ingredients: [
