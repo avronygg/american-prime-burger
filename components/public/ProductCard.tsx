@@ -60,7 +60,7 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.description}
         </p>
         <div className="pt-2 mt-auto border-t border-[#2a2a2a] flex items-center justify-between gap-2">
-          <span className="text-[#C8102E] text-base md:text-lg font-bold tabular-nums" style={{ fontFamily: "var(--font-space-mono)" }}>
+          <span className="text-[#F5EFE6] text-xl md:text-2xl tabular-nums" style={{ fontFamily: "var(--font-anton)" }}>
             ${price.toLocaleString("es-CL")}
           </span>
           <span className="text-[#6B6660] text-[10px] uppercase tracking-wide group-hover:text-[#C8102E] transition-colors" style={{ fontFamily: "var(--font-space-mono)" }}>
