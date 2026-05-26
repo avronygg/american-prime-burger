@@ -7,6 +7,7 @@ import DrinkCard from "@/components/public/DrinkCard";
 import FadeIn from "@/components/public/FadeIn";
 import MarqueeStrip from "@/components/public/MarqueeStrip";
 import ProductModal from "@/components/public/ProductModal";
+import DeliverySection from "@/components/public/DeliverySection";
 import Reviews from "@/components/public/Reviews";
 import MapSection from "@/components/public/MapSection";
 import Footer from "@/components/public/Footer";
@@ -114,6 +115,9 @@ export default async function HomePage() {
             );
           })}
         </div>
+
+        {/* ── Delivery (Uber Eats + PedidosYa) ── */}
+        <DeliverySection />
 
         {/* ── Marquee strip (dark variant) before reviews ── */}
         <MarqueeStrip variant="dark" />

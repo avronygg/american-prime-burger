@@ -1,31 +1,37 @@
+// Reseñas reales tomadas de Google Maps (American Prime Burger, Providencia).
+// Elisa se truncó (texto original más extenso) para que la card no fuera 3× más
+// alta que las otras; el "…" señala el corte honestamente.
 const REVIEWS = [
   {
-    name: "Sebastián M.",
-    rating: 5,
-    date: "Hace 2 semanas",
-    text: "Las mejores hamburguesas de Providencia sin ninguna duda. La Double Cheese es brutal — la carne Angus se nota la diferencia desde el primer mordisco. Servicio rápido y el local tiene muy buena onda.",
-    avatar: "S",
-  },
-  {
-    name: "Valentina R.",
-    rating: 5,
-    date: "Hace 1 mes",
-    text: "El Pulled Pork Prime es una locura. El ahumado en leña se siente de verdad, no es de esos lugares que dicen ahumado y no sabe a nada. Llevo 3 veces y siempre quedo muy satisfecha. 100% recomendado.",
-    avatar: "V",
-  },
-  {
-    name: "Diego F.",
-    rating: 5,
-    date: "Hace 3 semanas",
-    text: "Probé el Texas Prime y fue lo mejor que he comido en Santiago en mucho tiempo. El brisket del sándwich también está increíble. Lugar con identidad propia, no es un fast food cualquiera.",
-    avatar: "D",
-  },
-  {
-    name: "Camila T.",
-    rating: 5,
-    date: "Hace 2 meses",
-    text: "Ambiente americano auténtico, la comida llega caliente y rápido. Las papas fritas están crujientes como tienen que ser. Los cafés también muy buenos. Definitivamente mi lugar favorito en Providencia.",
+    name: "Chjalmar Ekman",
     avatar: "C",
+    rating: 5,
+    date: "Hace un año",
+    badge: "Local Guide",
+    text: "Las mejores carnes ahumadas (por ellos mismos) que he probado en Santiago en varios años, servidas en sándwich, brunch o solas, siempre con el mejor pan para cada corte. Un menú amplio con opciones que parten desde el brunch a los almuerzos…",
+  },
+  {
+    name: "Elisa Vergara",
+    avatar: "E",
+    rating: 5,
+    date: "Hace un año",
+    badge: "Local Guide",
+    text: "Comida con buena terminación \"gringa\". Excelente opción de brunch, pedí el de Pulled pork con waffle + un dulce: buena temperatura y humedad del sandwich, el waffle tierno y el tocino muy crocante. Excelente crocancia de los aros de cebolla (pedimos también una Texas Prime). Me encantó que tienen amplia oferta de cafés fríos…",
+  },
+  {
+    name: "Felipe H",
+    avatar: "F",
+    rating: 5,
+    date: "Hace un año",
+    badge: "Local Guide",
+    text: "Hace mucho tiempo que no probaba hamburguesas tan bien hechas. Se nota que los ingredientes son de excelente calidad, hay preocupación y por lo mismo logran el sabor real de hamburguesas americanas. Las meatballs de brisket puro sabor a carne y la cáscara delgadita y crujiente. Las papitas también de mucho mejor calidad que en otros locales. Precios justos y buen tamaño de porciones. ¡Volveré a ir definitivamente!",
+  },
+  {
+    name: "Tiny Dream",
+    avatar: "T",
+    rating: 5,
+    date: "Hace un año",
+    text: "Ayer fuimos con nuestra perrita. Estuvo súper bien e incluso le prepararon su hamburguesa especial a ella. La atención muy buena, muy amables, la espera razonable y el sabor de la hamburguesa se sentía y no se escondía bajo el sabor de la salsa. Las papitas son estilo McDonald's.",
   },
 ];
 
@@ -112,9 +118,15 @@ export default function Reviews() {
                     {r.name}
                   </p>
                   <p
-                    className="text-[#6B6660] text-[10px]"
+                    className="text-[#6B6660] text-[10px] uppercase tracking-wider"
                     style={{ fontFamily: "var(--font-space-mono)" }}
                   >
+                    {r.badge && (
+                      <>
+                        <span className="text-[#C8102E]">{r.badge}</span>
+                        {" · "}
+                      </>
+                    )}
                     {r.date}
                   </p>
                 </div>
