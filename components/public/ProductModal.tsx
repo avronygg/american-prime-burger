@@ -105,13 +105,22 @@ export default function ProductModal() {
           <div className="px-5 pb-8 pt-4 md:px-6">
 
             {/* Badges */}
-            {(product.isNew || !product.available) && (
+            {(product.isNew || !product.available || product.tags.length > 0) && (
               <div className="flex flex-wrap gap-2 mb-3">
                 {product.isNew && (
                   <span className="bg-[#E4A82C] text-[#0F0F0F] text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 font-bold" style={{ fontFamily: "var(--font-space-mono)" }}>
                     ¡Nueva!
                   </span>
                 )}
+                {product.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-[#1A1A1A] text-[#F5EFE6] text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#C8102E]/70"
+                    style={{ fontFamily: "var(--font-space-mono)" }}
+                  >
+                    {tag}
+                  </span>
+                ))}
                 {!product.available && (
                   <span className="bg-[#1A1A1A] text-[#6B6660] text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#2a2a2a]" style={{ fontFamily: "var(--font-space-mono)" }}>
                     Agotado

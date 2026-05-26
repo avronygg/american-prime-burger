@@ -39,6 +39,7 @@ async function main() {
     data: [
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Prime Junior",
         description:
           "Hamburguesa de 110 g de carne 100% Angus americano con doble queso cheddar y kétchup, en pan brioche. Incluye 150 g de papas fritas.",
@@ -56,6 +57,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Cheeseburger",
         description:
           "Hamburguesa de 150 g de carne 100% Angus americano con doble queso cheddar, pepinillos, cebolla blanca y salsa Mac Prime, en pan brioche. Incluye 150 g de papas fritas.",
@@ -74,6 +76,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Doble Cheeseburger",
         description:
           "Doble hamburguesa con 220 g de carne 100% Angus americano (dos medallones de 110 g), cuatro láminas de queso cheddar, pepinillos, cebolla blanca y salsa Mac Prime, en pan brioche. Incluye 150 g de papas fritas.",
@@ -92,6 +95,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Traditional Burger",
         description:
           "Hamburguesa de 150 g de carne 100% Angus americano con lechuga, queso cheddar, tomate, cebolla morada, kétchup, mostaza y pepinillos, en pan brioche. Incluye 150 g de papas fritas.",
@@ -113,6 +117,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Doble Traditional Burger",
         description:
           "Doble hamburguesa con 220 g de carne 100% Angus americano (dos medallones de 110 g), lechuga, doble queso cheddar, tomate, cebolla morada, kétchup, mostaza y pepinillos, en pan brioche. Incluye 150 g de papas fritas.",
@@ -134,6 +139,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Oklahoma Burger",
         description:
           "Hamburguesa smash de 150 g de carne 100% Angus americano con cebolla, queso cheddar, pepinillos y mostaza Heinz, en pan brioche. Incluye 150 g de papas fritas.",
@@ -152,6 +158,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Doble Oklahoma Burger",
         description:
           "Doble hamburguesa smash con 220 g de carne 100% Angus americano (dos medallones de 110 g), cebolla, doble queso cheddar, pepinillos y mostaza Heinz, en pan brioche. Incluye 150 g de papas fritas.",
@@ -170,6 +177,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Texas Burger",
         description:
           "Hamburguesa de 150 g de carne 100% Angus americano con queso cheddar, aros de cebolla, tocino y salsa Barbecue Prime, en pan brioche. Incluye 150 g de papas fritas.",
@@ -188,6 +196,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Doble Texas Burger",
         description:
           "Doble hamburguesa con 220 g de carne 100% Angus americano (dos medallones de 110 g), doble queso cheddar, aros de cebolla, tocino y salsa Barbecue Prime, en pan brioche. Incluye 150 g de papas fritas.",
@@ -206,6 +215,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Pastrami Prime",
         description:
           "Hamburguesa de 150 g de carne 100% Angus americano con 100 g de pastrami, cebolla, pepinillos Heinz y salsa Mac Prime, en pan brioche. Incluye 150 g de papas fritas.",
@@ -224,6 +234,7 @@ async function main() {
       },
       {
         categoryId: hamburguesas.id,
+        tags: ["100% Angus"],
         name: "Texas Prime",
         description:
           "Hamburguesa de carne 100% Angus americano con pulled pork de 12 horas de cocción, queso americano, aros de cebolla, crujiente tocino ahumado y salsa BBQ Prime, en pan brioche. Incluye 150 g de papas fritas.",

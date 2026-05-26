@@ -37,12 +37,21 @@ export default function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
-        <div className="absolute top-2 left-2 flex flex-col gap-1">
+        <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
           {product.isNew && (
             <span className="bg-[#E4A82C] text-[#0F0F0F] text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 font-bold" style={{ fontFamily: "var(--font-space-mono)" }}>
               ¡Nueva!
             </span>
           )}
+          {product.tags.map((tag) => (
+            <span
+              key={tag}
+              className="bg-[#0F0F0F]/80 text-[#F5EFE6] text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#C8102E]/70"
+              style={{ fontFamily: "var(--font-space-mono)" }}
+            >
+              {tag}
+            </span>
+          ))}
           {!product.available && (
             <span className="bg-[#0F0F0F]/80 text-[#6B6660] text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 border border-[#2a2a2a]" style={{ fontFamily: "var(--font-space-mono)" }}>
               Agotado

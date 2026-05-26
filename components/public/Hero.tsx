@@ -34,6 +34,14 @@ export default function Hero() {
             />
           </div>
 
+          {/* Pre-headline / kicker — sits above the wordmark */}
+          <p
+            className="text-[#C8102E] text-sm md:text-base font-medium leading-snug mb-4 md:mb-5 max-w-md animate-fade-up"
+            style={{ fontFamily: "var(--font-manrope)" }}
+          >
+            ¡Llegó la mejor hamburguesa directo desde Estados Unidos con el auténtico sabor americano!
+          </p>
+
           {/* Title — 3 equal lines */}
           <h1
             className="uppercase leading-[1.15] md:leading-[1.05] mb-4 md:mb-6 animate-fade-up delay-100"
