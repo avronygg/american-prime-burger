@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="locales" className="bg-[#0F0F0F] border-t-4 border-[#C8102E]">
+    <footer className="bg-[#0F0F0F] border-t-4 border-[#C8102E]">
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 grid md:grid-cols-3 gap-12">
 
         {/* Brand */}
@@ -59,9 +59,9 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-3 mb-8">
             {[
-              { label: "Instagram", href: "https://instagram.com/americanprimeburger" },
-              { label: "Facebook", href: "https://facebook.com/americanprimeburger" },
-              { label: "TikTok", href: "https://tiktok.com/@americanprimeburger" },
+              { label: "Instagram", href: "https://www.instagram.com/americanprimeburger.cl" },
+              { label: "Facebook",  href: "https://www.facebook.com/americanprimeburger.cl" },
+              { label: "TikTok",    href: "https://www.tiktok.com/@americanprimeburger.cl" },
             ].map((s) => (
               <a
                 key={s.label}

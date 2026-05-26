@@ -134,7 +134,7 @@ export default function Reviews() {
 
         <div className="mt-8 text-center">
           <a
-            href="https://g.page/r/americanprimeburger/review"
+            href="https://www.google.com/maps/search/?api=1&query=American+Prime+Burger+Regimiento+Cazadores+1186+Providencia"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-[#6B6660] hover:text-[#F5EFE6] text-[11px] uppercase tracking-[0.2em] transition-colors border-b border-[#2a2a2a] pb-1"
