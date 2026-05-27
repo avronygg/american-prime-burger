@@ -7,6 +7,9 @@ const PHRASES = [
   "Sándwiches de la Casa",
   "Ahumado 12 Horas",
   "Recetas Propias de la Casa",
+  "Brisket",
+  "Pastrami",
+  "Pulled Pork",
 ];
 
 const CONTENT = PHRASES.join("   ★   ") + "   ★   ";
