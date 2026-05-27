@@ -408,13 +408,6 @@ async function main() {
         priceLocal: 3000,
         order: 10,
       },
-      {
-        categoryId: liquidos.id,
-        name: "Syrup",
-        description: "Agrega syrup a tus cafés.",
-        priceLocal: 300,
-        order: 11,
-      },
     ],
   });
 
