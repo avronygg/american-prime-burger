@@ -110,7 +110,7 @@ export default function Hero() {
         <div className="relative animate-slide-right delay-200">
           <div className="absolute inset-0 translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5 bg-[#C8102E]" />
 
-          <div className="relative w-full aspect-[4/3] md:aspect-[4/5] overflow-hidden">
+          <div className="relative w-full aspect-square md:aspect-[4/5] overflow-hidden">
             <Image
               src="/images/hero.png"
               alt="American Prime Burger — las mejores hamburguesas de Providencia"
