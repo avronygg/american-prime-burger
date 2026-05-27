@@ -303,7 +303,7 @@ async function main() {
       {
         categoryId: compartir.id,
         name: "Papas Fritas Familiares",
-        description: "Papas fritas extra crunchy (400 g).",
+        description: "Papas fritas finas extra crunchy (400 g).",
         priceLocal: 5990,
         image: "/images/papas-familiares.png",
         order: 2,
