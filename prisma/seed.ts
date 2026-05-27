@@ -72,6 +72,7 @@ async function main() {
         ],
         priceLocal: 8990,
         image: "/images/cheeseburger.png",
+        isNew: true,
         order: 2,
       },
       {
@@ -135,6 +136,7 @@ async function main() {
         ],
         priceLocal: 11990,
         image: "/images/doble-traditional.png",
+        isNew: true,
         order: 5,
       },
       {
@@ -173,6 +175,7 @@ async function main() {
         ],
         priceLocal: 12990,
         image: `${IMG}/2026/02/frame_137_1.webp`,
+        isNew: true,
         order: 7,
       },
       {
@@ -211,6 +214,7 @@ async function main() {
         ],
         priceLocal: 11990,
         image: "/images/doble-texas.png",
+        isNew: true,
         order: 9,
       },
       {
@@ -250,7 +254,6 @@ async function main() {
         ],
         priceLocal: 12990,
         image: `${IMG}/2026/02/frame_150_1.webp`,
-        isNew: true,
         order: 11,
       },
     ],
@@ -292,7 +295,7 @@ async function main() {
       {
         categoryId: compartir.id,
         name: "Papas Fritas Individuales",
-        description: "Porción individual de papas fritas (150 g).",
+        description: "Papas fritas finas extra crunchy (150 g).",
         priceLocal: 3990,
         image: "/images/papas-individuales.png",
         order: 1,
@@ -300,7 +303,7 @@ async function main() {
       {
         categoryId: compartir.id,
         name: "Papas Fritas Familiares",
-        description: "Porción familiar de papas fritas para compartir (400 g).",
+        description: "Papas fritas extra crunchy (400 g).",
         priceLocal: 5990,
         image: "/images/papas-familiares.png",
         order: 2,
