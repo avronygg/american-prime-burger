@@ -265,7 +265,7 @@ async function main() {
       {
         categoryId: sandwich.id,
         name: "Pulled Pork Prime",
-        description: "Suave pan de papa, 150g de carne de cerdo ahumada en leña de cerezo y durazno, desmechada con cremosa ensalada de repollo coleslaw, pepinillos y nuestra salsa BBQ Prime.",
+        description: "Suave pan de papa, 150g de carne de cerdo ahumada en leña de cerezo y durazno, desmechada con cremosa ensalada de repollo coleslaw, pepinillos y nuestra salsa BBQ Prime. Incluye 150 g de papas fritas.",
         priceLocal: 9990,
         image: `${IMG}/2026/02/frame_146_1.webp`,
         order: 1,
@@ -273,7 +273,7 @@ async function main() {
       {
         categoryId: sandwich.id,
         name: "Sándwich Brisket",
-        description: "Suave pan de papa con 200g de brisket Angus de la casa ahumado en roble francés, nuestra deliciosa salsa de cebolla caramelizada y crujiente mix de hojas.",
+        description: "Suave pan de papa con 200g de brisket Angus de la casa ahumado en roble francés, nuestra deliciosa salsa de cebolla caramelizada y crujiente mix de hojas. Incluye 150 g de papas fritas.",
         priceLocal: 11990,
         image: "/images/sandwich-brisket.png",
         order: 2,
@@ -281,7 +281,7 @@ async function main() {
       {
         categoryId: sandwich.id,
         name: "Sándwich de Pastrami Prime",
-        description: "Suave pan de papa, 200g de pastrami Angus de la casa ahumado en roble americano, queso fundido, pepinillos y mostaza.",
+        description: "Suave pan de papa, 200g de pastrami Angus de la casa ahumado en roble americano, queso fundido, pepinillos y mostaza. Incluye 150 g de papas fritas.",
         priceLocal: 11990,
         image: "/images/sandwich-pastrami-prime.png",
         order: 3,
