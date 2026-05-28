@@ -273,7 +273,7 @@ async function main() {
       {
         categoryId: sandwich.id,
         name: "Sándwich Brisket",
-        description: "Suave pan de papa con 200g de brisket Angus de la casa ahumado en roble francés, nuestra deliciosa salsa de cebolla caramelizada y crujiente mix de hojas. Incluye 150 g de papas fritas.",
+        description: "Suave pan de papa con 150 g de brisket Angus de la casa ahumado en roble francés, nuestra deliciosa salsa de cebolla caramelizada y crujiente mix de hojas. Incluye 150 g de papas fritas.",
         priceLocal: 11990,
         image: "/images/sandwich-brisket.png",
         order: 2,
