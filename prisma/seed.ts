@@ -319,7 +319,7 @@ async function main() {
       {
         categoryId: compartir.id,
         name: "Pollo Frito",
-        description: "5 piezas de pollo apanado, crujientes y jugosos.",
+        description: "5 piezas de pollo frito agridulce, crujientes y jugosos, con nuestra salsa BBQ Prime.",
         priceLocal: 8990,
         image: "/images/pollo-frito.png",
         order: 4,
