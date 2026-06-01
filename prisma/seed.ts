@@ -91,7 +91,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 10990,
-        image: `${IMG}/2026/02/frame_140_1.webp`,
+        image: null,
         order: 3,
       },
       {
@@ -113,7 +113,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 9990,
-        image: `${IMG}/2026/02/frame_143_1.webp`,
+        image: null,
         order: 4,
       },
       {
@@ -155,7 +155,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 9990,
-        image: `${IMG}/2026/02/frame_142_1.webp`,
+        image: null,
         order: 6,
       },
       {
@@ -174,7 +174,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 12990,
-        image: `${IMG}/2026/02/frame_137_1.webp`,
+        image: null,
         isNew: true,
         order: 7,
       },
@@ -194,7 +194,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 9990,
-        image: `${IMG}/2026/02/frame_138_1.webp`,
+        image: null,
         order: 8,
       },
       {
@@ -233,7 +233,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 12990,
-        image: `${IMG}/2026/02/frame_139_1.webp`,
+        image: null,
         order: 10,
       },
       {
@@ -253,7 +253,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 12990,
-        image: `${IMG}/2026/02/frame_150_1.webp`,
+        image: null,
         order: 11,
       },
     ],
@@ -267,7 +267,7 @@ async function main() {
         name: "Pulled Pork Prime",
         description: "Suave pan de papa, 150g de carne de cerdo ahumada en leña de cerezo y durazno, desmechada con cremosa ensalada de repollo coleslaw, pepinillos y nuestra salsa BBQ Prime. Incluye 150 g de papas fritas.",
         priceLocal: 9990,
-        image: `${IMG}/2026/02/frame_146_1.webp`,
+        image: null,
         order: 1,
       },
       {
