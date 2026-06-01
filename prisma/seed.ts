@@ -10,8 +10,6 @@ const pool = new Pool({ connectionString: process.env.DATABASE_URL });
 const adapter = new PrismaPg(pool);
 const prisma = new PrismaClient({ adapter });
 
-const IMG = "https://americanprimeburger.cl/wp-content/uploads";
-
 async function main() {
   // Limpiar tablas para re-seed limpio
   await prisma.product.deleteMany();
@@ -280,8 +278,8 @@ async function main() {
       },
       {
         categoryId: sandwich.id,
-        name: "Sándwich de Pastrami Prime",
-        description: "Suave pan de papa, 200g de pastrami Angus de la casa ahumado en roble americano, queso fundido, pepinillos y mostaza. Incluye 150 g de papas fritas.",
+        name: "Sándwich de Pastrami",
+        description: "Pan artesano, 150 g de pastrami Angus de la casa ahumado en roble americano, queso fundido, pepinillos y mostaza. Incluye 150 g de papas fritas.",
         priceLocal: 11990,
         image: "/images/sandwich-pastrami-prime.png",
         order: 3,
