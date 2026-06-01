@@ -91,7 +91,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 10990,
-        image: null,
+        image: "/images/doble-cheeseburger.png",
         order: 3,
       },
       {
@@ -113,7 +113,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 9990,
-        image: null,
+        image: "/images/traditional.png",
         order: 4,
       },
       {
@@ -155,7 +155,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 9990,
-        image: null,
+        image: "/images/oklahoma.png",
         order: 6,
       },
       {
@@ -174,7 +174,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 12990,
-        image: null,
+        image: "/images/doble-oklahoma.png",
         isNew: true,
         order: 7,
       },
@@ -194,7 +194,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 9990,
-        image: null,
+        image: "/images/texas.png",
         order: 8,
       },
       {
@@ -233,7 +233,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 12990,
-        image: null,
+        image: "/images/pastrami-prime.png",
         order: 10,
       },
       {
@@ -253,7 +253,7 @@ async function main() {
           { name: "Papas fritas", grams: 150 },
         ],
         priceLocal: 12990,
-        image: null,
+        image: "/images/texas-prime.png",
         order: 11,
       },
     ],
@@ -267,7 +267,7 @@ async function main() {
         name: "Pulled Pork Prime",
         description: "Suave pan de papa, 150g de carne de cerdo ahumada en leña de cerezo y durazno, desmechada con cremosa ensalada de repollo coleslaw, pepinillos y nuestra salsa BBQ Prime. Incluye 150 g de papas fritas.",
         priceLocal: 9990,
-        image: null,
+        image: "/images/sandwich-pulled-pork.png",
         order: 1,
       },
       {
