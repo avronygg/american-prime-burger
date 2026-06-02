@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Manrope, Space_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const anton = Anton({
@@ -36,7 +37,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${anton.variable} ${manrope.variable} ${spaceMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
