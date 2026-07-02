@@ -22,7 +22,7 @@ const PLATFORMS = [
     name: "Rappi",
     logo: "/images/logos/rappi.png",
     pitch: "Pide con Rappi y recibe tu pedido directo en la puerta.",
-    href: "https://www.rappi.cl/restaurantes/900118011-american-prime-burger",
+    href: "https://www.rappi.cl/restaurantes/delivery/74603-american-prime-burger",
   },
 ];
 
