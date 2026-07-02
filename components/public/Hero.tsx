@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DeliveryTrigger from "./DeliveryTrigger";
 
 export default function Hero() {
   return (
@@ -94,15 +95,12 @@ export default function Hero() {
             >
               Ver menú
             </a>
-            <a
-              href="https://linktr.ee/AmericanPrimeBurgerDelivery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group text-[#F5EFE6] text-sm uppercase tracking-[0.25em] hover:text-[#C8102E] transition-colors flex items-center gap-2 apb-focus-ring"
+            <DeliveryTrigger
+              className="group text-[#F5EFE6] text-sm uppercase tracking-[0.25em] hover:text-[#C8102E] transition-colors flex items-center gap-2 apb-focus-ring cursor-pointer"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Pedir delivery <span className="text-[#C8102E] inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
-            </a>
+            </DeliveryTrigger>
           </div>
         </div>
 

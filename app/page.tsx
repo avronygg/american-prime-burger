@@ -7,6 +7,7 @@ import DrinkCard from "@/components/public/DrinkCard";
 import FadeIn from "@/components/public/FadeIn";
 import MarqueeStrip from "@/components/public/MarqueeStrip";
 import ProductModal from "@/components/public/ProductModal";
+import DeliveryModal from "@/components/public/DeliveryModal";
 import DeliverySection from "@/components/public/DeliverySection";
 import Reviews from "@/components/public/Reviews";
 import MapSection from "@/components/public/MapSection";
@@ -144,6 +145,7 @@ export default async function HomePage() {
 
       {/* ── Product detail modal (single instance, shared by all cards) ── */}
       <ProductModal />
+      <DeliveryModal />
 
       {/* ── WhatsApp FAB ── */}
       <a

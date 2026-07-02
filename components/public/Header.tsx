@@ -73,15 +73,13 @@ export default function Header() {
             >
               Cómo llegar
             </a>
-            <a
-              href="https://linktr.ee/AmericanPrimeBurgerDelivery"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-[#C8102E] text-[#F5EFE6] px-4 py-2 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.97] apb-focus-ring"
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("apb:openDelivery"))}
+              className="group bg-[#C8102E] text-[#F5EFE6] px-4 py-2 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.97] apb-focus-ring cursor-pointer"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Pedir <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
-            </a>
+            </button>
           </div>
 
           {/* Mobile: hamburger button (44×44 touch target per a11y) */}
@@ -128,15 +126,13 @@ export default function Header() {
           </a>
         </nav>
 
-        <a
-          href="https://linktr.ee/AmericanPrimeBurgerDelivery"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group bg-[#C8102E] text-[#F5EFE6] py-4 text-center text-sm uppercase tracking-[0.3em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.98] apb-focus-ring mt-auto"
+        <button
+          onClick={() => { setMenuOpen(false); window.dispatchEvent(new CustomEvent("apb:openDelivery")); }}
+          className="group bg-[#C8102E] text-[#F5EFE6] py-4 text-center text-sm uppercase tracking-[0.3em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.98] apb-focus-ring mt-auto cursor-pointer w-full"
           style={{ fontFamily: "var(--font-space-mono)" }}
         >
           Pedir delivery <span className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>
-        </a>
+        </button>
 
         <p
           className="text-[#2a2a2a] text-[10px] uppercase tracking-widest mt-6 text-center"

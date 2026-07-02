@@ -18,6 +18,12 @@ const PLATFORMS = [
     pitch: "Tracking en vivo del repartidor y entrega en minutos a la puerta.",
     href: "https://www.ubereats.com/cl/store/american-prime-burger/owquGf-IVlyZitym0aaxAw?diningMode=DELIVERY",
   },
+  {
+    name: "Rappi",
+    logo: "/images/logos/rappi.png",
+    pitch: "Pide con Rappi y recibe tu pedido directo en la puerta.",
+    href: "https://www.rappi.cl/restaurantes/900118011-american-prime-burger",
+  },
 ];
 
 export default function DeliverySection() {
@@ -50,7 +56,7 @@ export default function DeliverySection() {
         </FadeIn>
 
         {/* ── Two delivery cards ── */}
-        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-6">
           {PLATFORMS.map((p, i) => (
             <FadeIn key={p.name} delay={i * 100} direction="up" className="h-full">
               <a
