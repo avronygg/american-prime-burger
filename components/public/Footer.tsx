@@ -44,9 +44,7 @@ export default function Footer() {
           </address>
           <div style={{ fontFamily: "var(--font-space-mono)" }}>
             <p className="text-[#6B6660] text-[10px] uppercase tracking-[0.3em] mb-2">Horario</p>
-            <p className="text-[#F5EFE6] text-xs">Lun y Jue · 11:00 – 21:30</p>
-            <p className="text-[#F5EFE6] text-xs">Mar, Mié, Vie · 10:45 – 21:30</p>
-            <p className="text-[#F5EFE6] text-xs">Sáb y Dom · 10:30 – 21:30</p>
+            <p className="text-[#F5EFE6] text-xs">Todos los días · 11:00 – 21:30</p>
           </div>
         </div>
 
