@@ -51,6 +51,12 @@ const restaurantSchema = {
       closes: "21:30",
     },
   ],
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -33.43705579682573,
+    longitude: -70.6141281245843,
+  },
+  hasMap: "https://www.google.com/maps/search/?api=1&query=-33.43705579682573,-70.6141281245843",
   hasMenu: siteUrl,
   sameAs: [
     "https://www.instagram.com/americanprimeburger.cl",

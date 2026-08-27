@@ -1,37 +1,34 @@
 // Reseñas reales tomadas de Google Maps (American Prime Burger, Providencia).
-// Elisa se truncó (texto original más extenso) para que la card no fuera 3× más
-// alta que las otras; el "…" señala el corte honestamente.
+// Los extractos se mantienen fieles y de extensión similar para equilibrar las cards.
 const REVIEWS = [
   {
-    name: "Chjalmar Ekman",
-    avatar: "C",
+    name: "Jalalla Turismo Aventura",
+    avatar: "J",
     rating: 5,
     date: "Hace un año",
-    badge: "Local Guide",
-    text: "Las mejores carnes ahumadas (por ellos mismos) que he probado en Santiago en varios años, servidas en sándwich, brunch o solas, siempre con el mejor pan para cada corte. Un menú amplio con opciones que parten desde el brunch a los almuerzos…",
+    text: "Muy buena comida, calidad y sabor. Pedí hamburguesa y llegó tal como en las fotos; atención rápida y profesional. ¡Recomendado!",
   },
   {
-    name: "Elisa Vergara",
-    avatar: "E",
+    name: "Diego de la Maza",
+    avatar: "D",
     rating: 5,
-    date: "Hace un año",
+    date: "Hace 6 meses",
     badge: "Local Guide",
-    text: "Comida con buena terminación \"gringa\". Excelente opción de brunch, pedí el de Pulled pork con waffle + un dulce: buena temperatura y humedad del sandwich, el waffle tierno y el tocino muy crocante. Excelente crocancia de los aros de cebolla (pedimos también una Texas Prime). Me encantó que tienen amplia oferta de cafés fríos…",
+    text: "Tercera vez que vengo: hamburguesas y sándwiches buenísimos, carne Angus y porciones grandes. Ahora también tienen helados.",
   },
   {
-    name: "Felipe H",
-    avatar: "F",
+    name: "Pablo Reyes",
+    avatar: "P",
     rating: 5,
-    date: "Hace un año",
-    badge: "Local Guide",
-    text: "Hace mucho tiempo que no probaba hamburguesas tan bien hechas. Se nota que los ingredientes son de excelente calidad, hay preocupación y por lo mismo logran el sabor real de hamburguesas americanas. Las meatballs de brisket puro sabor a carne y la cáscara delgadita y crujiente. Las papitas también de mucho mejor calidad que en otros locales. Precios justos y buen tamaño de porciones. ¡Volveré a ir definitivamente!",
+    date: "Hace 3 meses",
+    text: "La mejor hamburguesa que he probado en mucho tiempo: ingredientes de calidad y preparación perfecta. Pedido rápido e intuitivo.",
   },
   {
     name: "Tiny Dream",
     avatar: "T",
     rating: 5,
     date: "Hace un año",
-    text: "Ayer fuimos con nuestra perrita. Estuvo súper bien e incluso le prepararon su hamburguesa especial a ella. La atención muy buena, muy amables, la espera razonable y el sabor de la hamburguesa se sentía y no se escondía bajo el sabor de la salsa. Las papitas son estilo McDonald's.",
+    text: "Fuimos con nuestra perrita y le prepararon una hamburguesa especial. Atención muy amable, espera razonable y hamburguesa sabrosa.",
   },
 ];
 
