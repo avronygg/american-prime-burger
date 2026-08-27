@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     locale: "es_CL",
     type: "website",
   },
+  verification: {
+    // Google Search Console. Genera <meta name="google-site-verification" ... />
+    google: "kqpHFnlUMQnqun6_fanzKVUcgfrbb-UrJjwvetbnqNM",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
