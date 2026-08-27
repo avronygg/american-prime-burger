@@ -41,7 +41,8 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/flags/usa.svg"
-          alt="Bandera de Estados Unidos"
+          alt=""
+          aria-hidden="true"
           className="absolute top-2 right-2 h-5 w-[38px] z-10"
           style={{ boxShadow: "1.5px 1.5px 0 #0F0F0F" }}
         />

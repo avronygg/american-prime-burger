@@ -7,6 +7,16 @@ import type { NextConfig } from "next";
 const IMAGE_CACHE_SECONDS = 60 * 60 * 24 * 31;
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/hamburguesas-cerca-de-mi",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+
   images: {
     remotePatterns: [
       {

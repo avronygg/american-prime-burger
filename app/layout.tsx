@@ -22,6 +22,22 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://americanprimeburger.cl"),
+  verification: {
+    google: "kqpHFnlUMQnqun6_fanzKVUcgfrbb-UrJjwvetbnqNM",
+  },
+  applicationName: "American Prime Burger",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   title: "American Prime Burger — Providencia, Santiago",
   description:
     "Hamburguesas 100% Angus Americano, sándwiches ahumados y más. Regimiento Cazadores 1186, Local 3, Providencia.",
@@ -32,10 +48,20 @@ export const metadata: Metadata = {
     siteName: "American Prime Burger",
     locale: "es_CL",
     type: "website",
+    images: [
+      {
+        url: "/images/hero.webp",
+        width: 1200,
+        height: 1200,
+        alt: "Hamburguesa de American Prime Burger en Providencia",
+      },
+    ],
   },
-  verification: {
-    // Google Search Console. Genera <meta name="google-site-verification" ... />
-    google: "kqpHFnlUMQnqun6_fanzKVUcgfrbb-UrJjwvetbnqNM",
+  twitter: {
+    card: "summary_large_image",
+    title: "American Prime Burger",
+    description: "Hamburguesas Angus americanas y sándwiches ahumados en Providencia.",
+    images: ["/images/hero.webp"],
   },
 };
 

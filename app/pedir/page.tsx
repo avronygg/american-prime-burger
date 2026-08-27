@@ -5,6 +5,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pedir delivery — American Prime Burger",
   description: "American Prime Burger ya llega directo a tu casa. Pide por PedidosYa, Uber Eats o Rappi. Delivery en Providencia, Santiago.",
+  alternates: { canonical: "/pedir" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    url: "/pedir",
+    title: "Pedir delivery | American Prime Burger",
+    description: "Pide American Prime Burger por PedidosYa, Uber Eats o Rappi en Providencia, Santiago.",
+  },
 };
 
 const PLATFORMS = [

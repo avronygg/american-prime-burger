@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import type { Metadata } from "next";
 import Header from "@/components/public/Header";
 import Hero from "@/components/public/Hero";
 import CategoryNav from "@/components/public/CategoryNav";
@@ -14,6 +15,49 @@ import MapSection from "@/components/public/MapSection";
 import Footer from "@/components/public/Footer";
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
+
+const siteUrl = "https://americanprimeburger.cl";
+
+const restaurantSchema = {
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": `${siteUrl}/#restaurant`,
+  name: "American Prime Burger",
+  url: siteUrl,
+  image: `${siteUrl}/images/hero.webp`,
+  logo: `${siteUrl}/images/logo-white.webp`,
+  description:
+    "Hamburguesas 100% Angus americano y sándwiches ahumados en Providencia, Santiago.",
+  servesCuisine: ["Americana", "Hamburguesas", "Sándwiches ahumados"],
+  priceRange: "$$",
+  telephone: "+56971479783",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Regimiento Cazadores 1186, Local 3",
+    addressLocality: "Providencia",
+    addressRegion: "Región Metropolitana",
+    postalCode: "7501020",
+    addressCountry: "CL",
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "11:00",
+      closes: "21:30",
+    },
+  ],
+  hasMenu: siteUrl,
+  sameAs: [
+    "https://www.instagram.com/americanprimeburger.cl",
+    "https://www.facebook.com/profile.php?id=61558595158568",
+    "https://www.tiktok.com/@americanprimeburger.cl",
+  ],
+};
 
 const DRINK_SLUGS = ["liquidos"];
 
@@ -38,6 +82,12 @@ export default async function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(restaurantSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Header />
 
       <main>

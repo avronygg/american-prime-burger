@@ -1,6 +1,12 @@
 import { auth } from "@/lib/auth";
 import { signOut } from "@/lib/auth";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Administración",
+  robots: { index: false, follow: false },
+};
 
 const NAV = [
   { href: "/admin",           label: "Dashboard",  icon: "▦" },
