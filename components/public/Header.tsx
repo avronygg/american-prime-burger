@@ -73,6 +73,13 @@ export default function Header() {
             >
               Cómo llegar
             </a>
+            <Link
+              href="/pedir"
+              className="text-[#6B6660] hover:text-[#F5EFE6] transition-colors text-[11px] uppercase tracking-[0.2em] apb-focus-ring"
+              style={{ fontFamily: "var(--font-space-mono)" }}
+            >
+              Delivery
+            </Link>
             <button
               onClick={() => window.dispatchEvent(new CustomEvent("apb:openDelivery"))}
               className="group bg-[#C8102E] text-[#F5EFE6] px-4 py-2 text-[11px] uppercase tracking-[0.2em] font-bold hover:bg-[#8B0A1F] transition-all duration-200 ease-out active:scale-[0.97] apb-focus-ring cursor-pointer"
@@ -124,6 +131,14 @@ export default function Header() {
           >
             Información
           </a>
+          <Link
+            href="/pedir"
+            onClick={() => setMenuOpen(false)}
+            className="text-[#6B6660] text-4xl uppercase py-3 border-b border-[#1A1A1A] hover:text-[#C8102E] transition-colors apb-focus-ring"
+            style={{ fontFamily: "var(--font-anton)" }}
+          >
+            Delivery
+          </Link>
         </nav>
 
         <button

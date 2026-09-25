@@ -96,7 +96,7 @@ export default function Hero() {
               Ver menú
             </a>
             <DeliveryTrigger
-              className="group text-[#F5EFE6] text-sm uppercase tracking-[0.25em] hover:text-[#C8102E] transition-colors flex items-center gap-2 apb-focus-ring cursor-pointer"
+              className="group ring-1 ring-inset ring-[#F5EFE6]/40 text-[#F5EFE6] px-7 py-3.5 md:px-8 md:py-4 text-sm uppercase tracking-[0.25em] font-bold hover:ring-[#C8102E] hover:text-[#C8102E] transition-all duration-200 ease-out active:scale-[0.97] flex items-center gap-2 apb-focus-ring cursor-pointer"
               style={{ fontFamily: "var(--font-space-mono)" }}
             >
               Pedir delivery <span className="text-[#C8102E] inline-block transition-transform duration-200 ease-out group-hover:translate-x-1">→</span>

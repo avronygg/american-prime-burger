@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[#0F0F0F] border-t-4 border-[#C8102E]">
@@ -74,15 +76,13 @@ export default function Footer() {
               </a>
             ))}
           </div>
-          <a
-            href="https://linktr.ee/AmericanPrimeBurgerDelivery"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/pedir"
             className="inline-block bg-[#C8102E] text-[#F5EFE6] px-6 py-3 text-xs uppercase tracking-[0.2em] hover:bg-[#8B0A1F] transition-colors font-bold"
             style={{ fontFamily: "var(--font-space-mono)" }}
           >
             Pedir delivery →
-          </a>
+          </Link>
         </div>
       </div>
 
