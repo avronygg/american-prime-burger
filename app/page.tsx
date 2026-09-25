@@ -57,11 +57,14 @@ const restaurantSchema = {
     longitude: -70.6141281245843,
   },
   hasMap: "https://www.google.com/maps/search/?api=1&query=-33.43705579682573,-70.6141281245843",
-  hasMenu: siteUrl,
+  hasMenu: { "@id": `${siteUrl}/#menu` },
   sameAs: [
     "https://www.instagram.com/americanprimeburger.cl",
     "https://www.facebook.com/profile.php?id=61558595158568",
     "https://www.tiktok.com/@americanprimeburger.cl",
+    "https://www.pedidosya.cl/restaurantes/santiago/american-prime-burger-7fb747dc-ec48-4538-a56b-d3640984573c-menu",
+    "https://www.ubereats.com/cl/store/american-prime-burger/owquGf-IVlyZitym0aaxAw",
+    "https://www.rappi.cl/restaurantes/delivery/74603-american-prime-burger",
   ],
 };
 
@@ -86,12 +89,47 @@ export default async function HomePage() {
     orderBy: { order: "asc" },
   });
 
+  // Menú estructurado: mismo precio que muestra ProductCard (delivery ?? local)
+  const menuSchema = {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "@id": `${siteUrl}/#menu`,
+    name: "Menú American Prime Burger",
+    url: `${siteUrl}/#menu`,
+    inLanguage: "es-CL",
+    hasMenuSection: categories
+      .filter((c) => c.products.some((p) => p.available))
+      .map((c) => ({
+        "@type": "MenuSection",
+        name: SECTION_DISPLAY_NAMES[c.slug] ?? c.name,
+        hasMenuItem: c.products
+          .filter((p) => p.available)
+          .map((p) => ({
+            "@type": "MenuItem",
+            name: p.name,
+            description: p.description,
+            ...(p.image && { image: p.image.startsWith("http") ? p.image : `${siteUrl}${p.image}` }),
+            offers: {
+              "@type": "Offer",
+              price: p.priceDelivery ?? p.priceLocal,
+              priceCurrency: "CLP",
+            },
+          })),
+      })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(restaurantSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(menuSchema).replace(/</g, "\\u003c"),
         }}
       />
       <Header />

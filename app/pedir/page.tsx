@@ -26,6 +26,23 @@ export const metadata: Metadata = {
     url: "/pedir",
     title: "Delivery de hamburguesas en Providencia | American Prime Burger",
     description: "Pide American Prime Burger por PedidosYa, Uber Eats, Rappi o WhatsApp. Delivery en Providencia y comunas cercanas.",
+    siteName: "American Prime Burger",
+    locale: "es_CL",
+    type: "website",
+    images: [
+      {
+        url: "/images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hamburguesas de American Prime Burger en Providencia, Santiago",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Delivery de hamburguesas en Providencia | American Prime Burger",
+    description: "Pide American Prime Burger por PedidosYa, Uber Eats, Rappi o WhatsApp. Delivery en Providencia y comunas cercanas.",
+    images: ["/images/og.jpg"],
   },
 };
 

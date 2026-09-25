@@ -57,6 +57,12 @@ export default function Hero() {
             className="uppercase leading-[1.15] md:leading-[1.05] mb-4 md:mb-6 animate-fade-up delay-100"
             style={{ fontFamily: "var(--font-anton)" }}
           >
+            <span
+              className="block text-[#C8102E] text-xs md:text-sm tracking-[0.3em] leading-normal mb-2 md:mb-3"
+              style={{ fontFamily: "var(--font-space-mono)" }}
+            >
+              Hamburguesas americanas en Providencia
+            </span>
             <span className="block text-[#F5EFE6] text-[clamp(4rem,12vw,7.5rem)]">American</span>
             <span className="block text-[#C8102E]  text-[clamp(4rem,12vw,7.5rem)]">Prime</span>
             <span className="block text-[#F5EFE6]  text-[clamp(4rem,12vw,7.5rem)]">Burger</span>
@@ -75,6 +81,7 @@ export default function Hero() {
             {[
               "★ Carne 100% Angus americano",
               "♨ Ahumado 12 a 16 horas",
+              "◉ Providencia · 11:00 – 21:30",
             ].map((seal) => (
               <span
                 key={seal}

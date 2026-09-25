@@ -40,28 +40,28 @@ export const metadata: Metadata = {
   },
   title: "Hamburguesas Americanas en Providencia | American Prime Burger",
   description:
-    "Hamburguesas 100% Angus americano y sándwiches ahumados en Providencia, Santiago. Revisa el menú y pide delivery.",
+    "Hamburguesas 100% Angus americano y sándwiches ahumados 12–16 horas en Providencia, Santiago. Abierto todos los días 11:00–21:30. Revisa el menú y pide delivery.",
   openGraph: {
-    title: "American Prime Burger",
-    description: "Hamburguesas Angus americanas y sándwiches ahumados en Providencia, Santiago.",
+    title: "Hamburguesas Americanas en Providencia | American Prime Burger",
+    description: "Hamburguesas 100% Angus americano y sándwiches ahumados en Providencia, Santiago. Todos los días 11:00–21:30.",
     url: "https://americanprimeburger.cl",
     siteName: "American Prime Burger",
     locale: "es_CL",
     type: "website",
     images: [
       {
-        url: "/images/hero.webp",
+        url: "/images/og.jpg",
         width: 1200,
-        height: 1200,
-        alt: "Hamburguesa de American Prime Burger en Providencia",
+        height: 630,
+        alt: "Hamburguesas de American Prime Burger en Providencia, Santiago",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "American Prime Burger",
-    description: "Hamburguesas Angus americanas y sándwiches ahumados en Providencia, Santiago.",
-    images: ["/images/hero.webp"],
+    title: "Hamburguesas Americanas en Providencia | American Prime Burger",
+    description: "Hamburguesas 100% Angus americano y sándwiches ahumados en Providencia, Santiago. Todos los días 11:00–21:30.",
+    images: ["/images/og.jpg"],
   },
 };
 
